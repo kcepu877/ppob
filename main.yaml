@@ -72,140 +72,180 @@ experimental:
   
 proxy-providers:
   VVIP-ID:
-    type: file
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/vvip-id.yaml"
     path: "./proxy_provider/vvip-id.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
   VVIP-SG:
-    type: file
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/vvip-sg.yaml"
     path: "./proxy_provider/vvip-sg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
   EDU-ID:
-    type: file
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/eduid.yaml"
     path: "./proxy_provider/eduid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  EDU-SG:
-    type: file
+  EDU-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/edusg.yaml"
     path: "./proxy_provider/edusg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60    
-  ILPED-ID:
-    type: file
+  ILPED-ID: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/ilpedid.yaml"
     path: "./proxy_provider/ilpedid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  ILPED-SG:
-    type: file
+  ILPED-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/ilpedsg.yaml"
     path: "./proxy_provider/ilpedsg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60     
-  SPOTIFY-ID:
-    type: file
+  SPOTIFY-ID: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/spotifyid.yaml"
     path: "./proxy_provider/spotifyid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  SPOTIFY-SG:
-    type: file
+  SPOTIFY-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/spotifysg.yaml"
     path: "./proxy_provider/spotifysg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60   
-  AVA-ID:
-    type: file
+  AVA-ID: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/avaid.yaml"
     path: "./proxy_provider/avaid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  AVA-SG:
-    type: file
+  AVA-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/avasg.yaml"
     path: "./proxy_provider/avasg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60  
-  WA-ID:
-    type: file
+  WA-ID: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/waid.yaml"
     path: "./proxy_provider/waid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  WA-SG:
-    type: file
+  WA-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/wasg.yaml"
     path: "./proxy_provider/wasg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  APPS-ID:
-    type: file
+  APPS-ID: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/appsid.yaml"
     path: "./proxy_provider/appsid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  APPS-SG:
-    type: file
+  APPS-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/appssg.yaml"
     path: "./proxy_provider/appssg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60 
-  GRAB-ID:
-    type: file
+  GRAB-ID: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/grabid.yaml"
     path: "./proxy_provider/grabid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  GRAB-SG:
-    type: file
+  GRAB-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/grabsg.yaml"
     path: "./proxy_provider/grabsg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  GOPAY-ID:
-    type: file
+  GOPAY-ID: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/gopayid.yaml"
     path: "./proxy_provider/gopayid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  GOPAY-SG:
-    type: file
+  GOPAY-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/gopaysg.yaml"
     path: "./proxy_provider/gopaysg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60 
-  TIKTOK-ID:
-    type: file
+  TIKTOK-ID: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/tiktokid.yaml"
     path: "./proxy_provider/tiktokid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  TIKTOK-SG:
-    type: file
+  TIKTOK-SG: 
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/tiktoksg.yaml"
     path: "./proxy_provider/tiktoksg.yaml"
     health-check:
       enable: true
@@ -536,234 +576,234 @@ rule-providers:
     type: http
     behavior: classical
     path: "./rule_provider/rule_direct.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_direct.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_direct.yaml
     interval: 86400
   rule_umum:
     type: http
     behavior: classical
     path: "./rule_provider/rule_umum.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_umum.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_umum.yaml
     interval: 86400
   rule_portgames:
     type: http
     behavior: classical
     path: "./rule_provider/rule_portgames.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_portgames.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_portgames.yaml
     interval: 86400
   rule_videoconferences:
     type: http
     behavior: classical
     path: "./rule_provider/rule_videoconferences.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_videoconferences.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_videoconferences.yaml
     interval: 86400
   rule_Indo:
     type: http
     behavior: classical
     path: "./rule_provider/rule_indo.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_indo.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_indo.yaml
     interval: 86400
   rule_Sosmed:
     type: http
     behavior: classical
     path: "./rule_provider/rule_sosmed.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_sosmed.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_sosmed.yaml
     interval: 86400
   rule_Streaming:
     type: http
     behavior: classical
     path: "./rule_provider/rule_streaming.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_streaming.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_streaming.yaml
     interval: 86400
   rule_Gaming:
     type: http
     behavior: classical
     path: "./rule_provider/rule_gaming.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_gaming.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_gaming.yaml
     interval: 86400
   rule_Speedtest:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_speedtest.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_speedtest.yaml
     path: "./rule_provider/rule_speedtest.yaml"
     interval: 86400
   rule_discord:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_discord.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_discord.yaml
     path: "./rule_provider/rule_discord.yaml"
     interval: 86400
   rule_hijacking:
     type: http
     behavior: classical
     path: "./rule_provider/rule_hijacking.yaml"
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hijacking.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_hijacking.yaml
     interval: 86400
   rule_privacy:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_privacy.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_privacy.yaml
     path: "./rule_provider/rule_privacy.yaml"
     interval: 86400
   rule_basicads:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_basicads.yaml
     path: "./rule_provider/rule_basicads.yaml"
     interval: 43200
   rule_personalads:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_personalads.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_personalads.yaml
     path: "./rule_provider/rule_personalads.yaml"
     interval: 86400
   rule_malicious:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_malicious.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_malicious.yaml
     path: "./rule_provider/rule_malicious.yaml"
     interval: 43200
   rule_maliciousip:
     type: http
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_maliciousip.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_maliciousip.yaml
     path: "./rule_provider/rule_maliciousip.yaml"
     interval: 43200
   rule_falsepositive:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_falsepositive.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_falsepositive.yaml
     path: "./rule_provider/rule_falsepositive.yaml"
     interval: 86400
   rule_porn:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_porn.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_porn.yaml
     path: "./rule_provider/rule_porn.yaml"
     interval: 86400
   rule_nsfw:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_nsfw.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_nsfw.yaml
     path: "./rule_provider/rule_nsfw.yaml"
     interval: 43200
   rule_lancidr:
     type: http
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_lancidr.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_lancidr.yaml
     path: "./rule_provider/rule_lancidr.yaml"
     interval: 86400
   rule_telegramcidr:
     type: http
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_telegramcidr.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_telegramcidr.yaml
     path: "./rule_provider/rule_telegramcidr.yaml"
     interval: 86400
   rule_telegram:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_telegram.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_telegram.yaml
     path: "./rule_provider/rule_telegram.yaml"
     interval: 86400
   rule_disneyplus:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_disneyplus.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_disneyplus.yaml
     path: "./rule_provider/rule_disneyplus.yaml"
     interval: 86400
   rule_games:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_games.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_games.yaml
     path: "./rule_provider/rule_games.yaml"
     interval: 86400
   rule_hbo:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbo.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_hbo.yaml
     path: "./rule_provider/rule_hbo.yaml"
     interval: 86400
   rule_hboasia:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hboasia.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_hboasia.yaml
     path: "./rule_provider/rule_hboasia.yaml"
     interval: 86400
   rule_hbohk:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbohk.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_hbohk.yaml
     path: "./rule_provider/rule_hbohk.yaml"
     interval: 86400
   rule_hbousa:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbousa.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_hbousa.yaml
     path: "./rule_provider/rule_hbousa.yaml"
     interval: 86400
   rule_iqiyi:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyi.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_iqiyi.yaml
     path: "./rule_provider/rule_iqiyi.yaml"
     interval: 86400
   rule_iqiyiinter:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyiinter.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_iqiyiinter.yaml
     path: "./rule_provider/rule_iqiyiinter.yaml"
     interval: 86400
   rule_line:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_line.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_line.yaml
     path: "./rule_provider/rule_line.yaml"
     interval: 86400
   rule_metaverse:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_metaverse.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_metaverse.yaml
     path: "./rule_provider/rule_metaverse.yaml"
     interval: 86400
   rule_netflix:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_netflix.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_netflix.yaml
     path: "./rule_provider/rule_netflix.yaml"
     interval: 86400
   rule_primevideo:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_primevideo.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_primevideo.yaml
     path: "./rule_provider/rule_primevideo.yaml"
     interval: 86400
   rule_playstore:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_playstore.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_playstore.yaml
     path: "./rule_provider/rule_playstore.yaml"
     interval: 86400
   rule_tiktok:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_tiktok.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_tiktok.yaml
     path: "./rule_provider/rule_tiktok.yaml"
     interval: 86400
   rule_twitch:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_twitch.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_twitch.yaml
     path: "./rule_provider/rule_twitch.yaml"
     interval: 86400
   rule_twitter:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_twitter.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_twitter.yaml
     path: "./rule_provider/rule_twitter.yaml"
     interval: 86400
   rule_Youtube:
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_youtube.yaml
+    url: https://raw.githubusercontent.com/kcepu877/ppob/main/rule_provider/rule_youtube.yaml
     path: "./rule_provider/rule_youtube.yaml"
     interval: 86400
 
