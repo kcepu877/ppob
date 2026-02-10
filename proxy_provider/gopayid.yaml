@@ -1,6 +1,6 @@
 proxies:
-  - name: BIZ EDU
-    server: 104.17.3.81
+  - name: BIZ GOPAY
+    server: app.gopay.co.id
     port: 443
     type: vless
     uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
@@ -14,8 +14,8 @@ proxies:
       headers:
         Host: biznet.garudabangsa.web.id
     udp: true
-  - name: BIZ 2 EDU
-    server: 104.17.3.81
+  - name: BIZ 2 GOPAY
+    server: app.gopay.co.id
     port: 443
     type: vmess
     uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
@@ -30,8 +30,8 @@ proxies:
       headers:
         Host: biznet.garudabangsa.web.id
     udp: true
-  - name: ID KING EDU
-    server: 104.17.3.81
+  - name: ID KING GOPAY
+    server: app.gopay.co.id
     port: 443
     type: vmess
     uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
@@ -46,8 +46,8 @@ proxies:
       headers:
         Host: indo-vip.vpntun.cloud
     udp: true
-  - name: ID EDU
-    server: 104.17.3.81
+  - name: ID GOPAY
+    server: app.gopay.co.id
     port: 443
     type: vmess
     uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
@@ -62,8 +62,8 @@ proxies:
       headers:
         Host: indo-vip.vpntun.cloud
     udp: true
-  - name: ID - CF - EDU
-    server: 104.17.3.81
+  - name: ID - CF - GOPAY
+    server: app.gopay.co.id
     port: 443
     type: vmess
     uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8

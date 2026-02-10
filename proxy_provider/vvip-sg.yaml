@@ -1,0 +1,515 @@
+proxies:
+  - name: SG NM ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO ILPED
+    server: ads.ruangguru.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: SG NM EDU
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO EDU
+    server: 104.17.3.81
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP EDU
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: SG NM GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: SG NM GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: SG NM TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: SG NM WA
+    server: 104.18.1.196
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO WA
+    server: 104.18.1.196
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP WA
+    server: 104.18.1.196
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: SG NM SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: SG NM APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: SG NM AVA
+    server: ava.game.naver.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+ 
+  - name: SG-DO AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP AVA
+    server: ava.game.naver.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true

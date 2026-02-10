@@ -1,0 +1,58 @@
+proxies:
+  - name: SG NM SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: SG KING SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG-DO SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
