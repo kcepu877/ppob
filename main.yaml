@@ -1,0 +1,842 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+bind-address: '*'
+ipv6: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+geodata-mode: false
+tcp-concurrent: false
+find-process-mode: strict
+unified-delay: false
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  respect-rules: true
+  default-nameserver:
+  - 1.1.1.1
+  - 8.8.8.8
+  nameserver:
+  - https://8.8.8.8/dns-query
+  - https://1.1.1.1/dns-query
+  - https://dns.google/dns-query
+  - https://dns.cloudflare.com/dns-query
+  proxy-server-nameserver:
+  - 112.215.198.254
+  - 112.215.198.248
+  fake-ip-filter:
+  - '*.lan'
+  - '*.localdomain'
+  - '*.example'
+  - '*.invalid'
+  - '*.localhost'
+  - '*.test'
+  - '*.local'
+  - +.stun.*.*
+  - +.stun.*.*.*
+  - +.stun.*.*.*.*
+  - +.stun.*.*.*.*.*
+  - '*.msftconnecttest.com'
+  - '*.msftncsi.com'
+  fallback:
+  - https://1.1.1.1/dns-query
+  - https://8.8.8.8/dns-query
+  - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+    - 240.0.0.0/4
+    - 0.0.0.0/32
+    domain:
+    - +.google.com
+    - +.facebook.com
+    - +.youtube.com
+    geosite:
+    - gfw
+  nameserver-policy:
+    geosite:cn:
+    - 114.114.114.114
+    - 223.5.5.5
+    geosite:geolocation-!cn:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+experimental:
+  sniff-tls-sni: true
+  ignore-resolve-fail: true
+  
+proxy-providers:
+  VVIP-ID:
+    type: file
+    path: "./proxy_provider/vvip-id.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  VVIP-SG:
+    type: file
+    path: "./proxy_provider/vvip-sg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  EDU-ID:
+    type: file
+    path: "./proxy_provider/eduid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  EDU-SG:
+    type: file
+    path: "./proxy_provider/edusg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60    
+  ILPED-ID:
+    type: file
+    path: "./proxy_provider/ilpedid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  ILPED-SG:
+    type: file
+    path: "./proxy_provider/ilpedsg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60     
+  SPOTIFY-ID:
+    type: file
+    path: "./proxy_provider/spotifyid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  SPOTIFY-SG:
+    type: file
+    path: "./proxy_provider/spotifysg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60   
+  AVA-ID:
+    type: file
+    path: "./proxy_provider/avaid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  AVA-SG:
+    type: file
+    path: "./proxy_provider/avasg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60  
+  WA-ID:
+    type: file
+    path: "./proxy_provider/waid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  WA-SG:
+    type: file
+    path: "./proxy_provider/wasg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  APPS-ID:
+    type: file
+    path: "./proxy_provider/appsid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  APPS-SG:
+    type: file
+    path: "./proxy_provider/appssg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60 
+  GRAB-ID:
+    type: file
+    path: "./proxy_provider/grabid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  GRAB-SG:
+    type: file
+    path: "./proxy_provider/grabsg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  GOPAY-ID:
+    type: file
+    path: "./proxy_provider/gopayid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  GOPAY-SG:
+    type: file
+    path: "./proxy_provider/gopaysg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60 
+  TIKTOK-ID:
+    type: file
+    path: "./proxy_provider/tiktokid.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+  TIKTOK-SG:
+    type: file
+    path: "./proxy_provider/tiktoksg.yaml"
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 60
+      
+proxy-groups:
+- name: 🚀 PROXY
+  type: select
+  url: https://detectportal.firefox.com/success.txt
+  interval: 60
+  proxies:
+      - ⚡ BEST PING
+      - 🇮🇩 SERVER ID
+      - 🇸🇬 SERVER SG
+      - 🎓 EDUKASI 🇮🇩
+      - 📱 TIKTOK 🇮🇩
+      - 📊 APPSFLYER 🇮🇩
+      - 💬 WhatsApp 🇮🇩
+      - 🎮 AVA-GAME 🇮🇩
+      - 👛 GOPAY 🇮🇩
+      - 🎵 SPOTIFY 🇮🇩
+      - 🚗 GRAB 🇮🇩
+      - 📚 ILPED 🇮🇩
+      - 🎓 EDUKASI 🇸🇬
+      - 📱 TIKTOK 🇸🇬
+      - 📊 APPSFLYER 🇸🇬
+      - 💬 WhatsApp 🇸🇬
+      - 🎮 AVA-GAME 🇸🇬
+      - 👛 GOPAY 🇸🇬
+      - 🎵 SPOTIFY 🇸🇬
+      - 🚗 GRAB 🇸🇬
+      - 📚 ILPED 🇸🇬
+      - DIRECT
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+- name: ⚡ BEST PING
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png
+  proxies:
+    - 🇮🇩 SERVER ID
+    - 🇸🇬 SERVER SG
+
+- name: 🛡️ FILTER
+  type: select
+  icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
+  proxies:
+    - REJECT
+    - DIRECT
+    - ⚡ BEST PING
+    - 🇮🇩 SERVER ID
+    - 🇸🇬 SERVER SG
+
+- name: 🚫 ADS BLOCK
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
+  proxies:
+    - REJECT
+    - DIRECT
+    - ⚡ BEST PING
+    - 🇮🇩 SERVER ID
+    - 🇸🇬 SERVER SG
+    - 🎓 EDUKASI 🇮🇩
+    - 📱 TIKTOK 🇮🇩
+    - 📊 APPSFLYER 🇮🇩
+    - 💬 WhatsApp 🇮🇩
+    - 🎮 AVA-GAME 🇮🇩
+    - 👛 GOPAY 🇮🇩
+    - 🎵 SPOTIFY 🇮🇩
+    - 🚗 GRAB 🇮🇩
+    - 📚 ILPED 🇮🇩
+    - 🎓 EDUKASI 🇸🇬
+    - 📱 TIKTOK 🇸🇬
+    - 📊 APPSFLYER 🇸🇬
+    - 💬 WhatsApp 🇸🇬
+    - 🎮 AVA-GAME 🇸🇬
+    - 👛 GOPAY 🇸🇬
+    - 🎵 SPOTIFY 🇸🇬
+    - 🚗 GRAB 🇸🇬
+    - 📚 ILPED 🇸🇬
+
+- name: 🕹️ GAME
+  type: select
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/game.png
+  proxies:
+    - REJECT
+    - DIRECT
+    - ⚡ BEST PING
+    - 🇮🇩 SERVER ID
+    - 🇸🇬 SERVER SG
+    - 🎮 AVA-GAME 🇮🇩
+    - 🎮 AVA-GAME 🇸🇬
+    - 🎓 EDUKASI 🇮🇩
+    - 📱 TIKTOK 🇮🇩
+    - 📊 APPSFLYER 🇮🇩
+    - 💬 WhatsApp 🇮🇩
+    - 👛 GOPAY 🇮🇩
+    - 🎵 SPOTIFY 🇮🇩
+    - 🚗 GRAB 🇮🇩
+    - 📚 ILPED 🇮🇩
+    - 🎓 EDUKASI 🇸🇬
+    - 📱 TIKTOK 🇸🇬
+    - 📊 APPSFLYER 🇸🇬
+    - 💬 WhatsApp 🇸🇬
+    - 👛 GOPAY 🇸🇬
+    - 🎵 SPOTIFY 🇸🇬
+    - 🚗 GRAB 🇸🇬
+    - 📚 ILPED 🇸🇬
+
+- name: 📺 STREAMING
+  type: select
+  icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Media.png
+  proxies:
+    - REJECT
+    - DIRECT
+    - ⚡ BEST PING
+    - 🇸🇬 SERVER SG
+    - 🇮🇩 SERVER ID
+    - 🎓 EDUKASI 🇮🇩
+    - 📱 TIKTOK 🇮🇩
+    - 📊 APPSFLYER 🇮🇩
+    - 💬 WhatsApp 🇮🇩
+    - 🎮 AVA-GAME 🇮🇩
+    - 👛 GOPAY 🇮🇩
+    - 🎵 SPOTIFY 🇮🇩
+    - 🚗 GRAB 🇮🇩
+    - 📚 ILPED 🇮🇩
+    - 🎓 EDUKASI 🇸🇬
+    - 📱 TIKTOK 🇸🇬
+    - 📊 APPSFLYER 🇸🇬
+    - 💬 WhatsApp 🇸🇬
+    - 🎮 AVA-GAME 🇸🇬
+    - 👛 GOPAY 🇸🇬
+    - 🎵 SPOTIFY 🇸🇬
+    - 🚗 GRAB 🇸🇬
+    - 📚 ILPED 🇸🇬
+
+- name: 🔞 PORN
+  type: select
+  icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netease.png
+  proxies:
+    - REJECT
+    - DIRECT
+    - ⚡ BEST PING
+    - 🇮🇩 SERVER ID
+    - 🇸🇬 SERVER SG
+    - 🎓 EDUKASI 🇮🇩
+    - 📱 TIKTOK 🇮🇩
+    - 📊 APPSFLYER 🇮🇩
+    - 💬 WhatsApp 🇮🇩
+    - 🎮 AVA-GAME 🇮🇩
+    - 👛 GOPAY 🇮🇩
+    - 🎵 SPOTIFY 🇮🇩
+    - 🚗 GRAB 🇮🇩
+    - 📚 ILPED 🇮🇩
+    - 🎓 EDUKASI 🇸🇬
+    - 📱 TIKTOK 🇸🇬
+    - 📊 APPSFLYER 🇸🇬
+    - 💬 WhatsApp 🇸🇬
+    - 🎮 AVA-GAME 🇸🇬
+    - 👛 GOPAY 🇸🇬
+    - 🎵 SPOTIFY 🇸🇬
+    - 🚗 GRAB 🇸🇬
+    - 📚 ILPED 🇸🇬
+
+- name: 🇮🇩 SERVER ID
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  icon: https://flagcdn.com/w2560/id.png
+  proxies:
+    - 🎓 EDUKASI 🇮🇩
+    - 📱 TIKTOK 🇮🇩
+    - 📊 APPSFLYER 🇮🇩
+    - 🎮 AVA-GAME 🇮🇩
+    - 👛 GOPAY 🇮🇩
+    - 💬 WhatsApp 🇮🇩
+    - 🎵 SPOTIFY 🇮🇩
+    - 📚 ILPED 🇮🇩
+    - 🚗 GRAB 🇮🇩
+
+- name: 🇸🇬 SERVER SG
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+  proxies:
+    - 🎓 EDUKASI 🇸🇬
+    - 📱 TIKTOK 🇸🇬
+    - 📊 APPSFLYER 🇸🇬
+    - 💬 WhatsApp 🇸🇬
+    - 🎮 AVA-GAME 🇸🇬
+    - 👛 GOPAY 🇸🇬
+    - 🎵 SPOTIFY 🇸🇬
+    - 🚗 GRAB 🇸🇬
+    - 📚 ILPED 🇸🇬
+ 
+- name: 🎓 EDUKASI 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/eduk.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - EDU-ID
+- name: 📚 ILPED 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/edu.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - ILPED-ID
+- name: 🎮 AVA-GAME 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/game.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - AVA-ID
+- name: 💬 WhatsApp 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/whatsapp_779120.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - WA-ID
+- name: 🎵 SPOTIFY 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/spotify.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - SPOTIFY-ID
+- name: 📊 APPSFLYER 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/apps.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - APPS-ID
+- name: 👛 GOPAY 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/goj.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - GOPAY-ID
+- name: 🚗 GRAB 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/grab.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - GRAB-ID
+- name: 📱 TIKTOK 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/tt.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - TIKTOK-ID
+- name: 🎓 EDUKASI 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/eduk.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - EDU-SG
+- name: 📚 ILPED 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/edu.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - ILPED-SG
+- name: 🎮 AVA-GAME 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/game.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - AVA-SG
+- name: 💬 WhatsApp 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/whatsapp_779120.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - WA-SG
+- name: 🎵 SPOTIFY 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/spotify.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - SPOTIFY-SG
+- name: 📊 APPSFLYER 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/apps.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - APPS-SG
+- name: 👛 GOPAY 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/goj.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - GOPAY-SG
+- name: 🚗 GRAB 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/grab.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - GRAB-SG
+- name: 📱 TIKTOK 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/tt.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - TIKTOK-SG
+
+rule-providers:
+  rule_Direct:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_direct.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_direct.yaml
+    interval: 86400
+  rule_umum:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_umum.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_umum.yaml
+    interval: 86400
+  rule_portgames:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_portgames.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_portgames.yaml
+    interval: 86400
+  rule_videoconferences:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_videoconferences.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_videoconferences.yaml
+    interval: 86400
+  rule_Indo:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_indo.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_indo.yaml
+    interval: 86400
+  rule_Sosmed:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_sosmed.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_sosmed.yaml
+    interval: 86400
+  rule_Streaming:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_streaming.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_streaming.yaml
+    interval: 86400
+  rule_Gaming:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_gaming.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_gaming.yaml
+    interval: 86400
+  rule_Speedtest:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_speedtest.yaml
+    path: "./rule_provider/rule_speedtest.yaml"
+    interval: 86400
+  rule_discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_discord.yaml
+    path: "./rule_provider/rule_discord.yaml"
+    interval: 86400
+  rule_hijacking:
+    type: http
+    behavior: classical
+    path: "./rule_provider/rule_hijacking.yaml"
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hijacking.yaml
+    interval: 86400
+  rule_privacy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_privacy.yaml
+    path: "./rule_provider/rule_privacy.yaml"
+    interval: 86400
+  rule_basicads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_basicads.yaml
+    path: "./rule_provider/rule_basicads.yaml"
+    interval: 43200
+  rule_personalads:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_personalads.yaml
+    path: "./rule_provider/rule_personalads.yaml"
+    interval: 86400
+  rule_malicious:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_malicious.yaml
+    path: "./rule_provider/rule_malicious.yaml"
+    interval: 43200
+  rule_maliciousip:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_maliciousip.yaml
+    path: "./rule_provider/rule_maliciousip.yaml"
+    interval: 43200
+  rule_falsepositive:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_falsepositive.yaml
+    path: "./rule_provider/rule_falsepositive.yaml"
+    interval: 86400
+  rule_porn:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_porn.yaml
+    path: "./rule_provider/rule_porn.yaml"
+    interval: 86400
+  rule_nsfw:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_nsfw.yaml
+    path: "./rule_provider/rule_nsfw.yaml"
+    interval: 43200
+  rule_lancidr:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_lancidr.yaml
+    path: "./rule_provider/rule_lancidr.yaml"
+    interval: 86400
+  rule_telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_telegramcidr.yaml
+    path: "./rule_provider/rule_telegramcidr.yaml"
+    interval: 86400
+  rule_telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_telegram.yaml
+    path: "./rule_provider/rule_telegram.yaml"
+    interval: 86400
+  rule_disneyplus:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_disneyplus.yaml
+    path: "./rule_provider/rule_disneyplus.yaml"
+    interval: 86400
+  rule_games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_games.yaml
+    path: "./rule_provider/rule_games.yaml"
+    interval: 86400
+  rule_hbo:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbo.yaml
+    path: "./rule_provider/rule_hbo.yaml"
+    interval: 86400
+  rule_hboasia:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hboasia.yaml
+    path: "./rule_provider/rule_hboasia.yaml"
+    interval: 86400
+  rule_hbohk:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbohk.yaml
+    path: "./rule_provider/rule_hbohk.yaml"
+    interval: 86400
+  rule_hbousa:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_hbousa.yaml
+    path: "./rule_provider/rule_hbousa.yaml"
+    interval: 86400
+  rule_iqiyi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyi.yaml
+    path: "./rule_provider/rule_iqiyi.yaml"
+    interval: 86400
+  rule_iqiyiinter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_iqiyiinter.yaml
+    path: "./rule_provider/rule_iqiyiinter.yaml"
+    interval: 86400
+  rule_line:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_line.yaml
+    path: "./rule_provider/rule_line.yaml"
+    interval: 86400
+  rule_metaverse:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_metaverse.yaml
+    path: "./rule_provider/rule_metaverse.yaml"
+    interval: 86400
+  rule_netflix:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_netflix.yaml
+    path: "./rule_provider/rule_netflix.yaml"
+    interval: 86400
+  rule_primevideo:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_primevideo.yaml
+    path: "./rule_provider/rule_primevideo.yaml"
+    interval: 86400
+  rule_playstore:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_playstore.yaml
+    path: "./rule_provider/rule_playstore.yaml"
+    interval: 86400
+  rule_tiktok:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_tiktok.yaml
+    path: "./rule_provider/rule_tiktok.yaml"
+    interval: 86400
+  rule_twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_twitch.yaml
+    path: "./rule_provider/rule_twitch.yaml"
+    interval: 86400
+  rule_twitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_twitter.yaml
+    path: "./rule_provider/rule_twitter.yaml"
+    interval: 86400
+  rule_Youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_youtube.yaml
+    path: "./rule_provider/rule_youtube.yaml"
+    interval: 86400
+
+rules:
+  # LOCAL NETWORKS (PRIORITAS TERTINGGI)
+- IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+- IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  
+  # GEOIP (PRIORITAS KEDUA)
+#- IP-,PRIVATE,DIRECT,no-resolve
+#- IP-,CN,DIRECT
+  
+  # RULE-PROVIDERS (DENGAN LOGIKA URUTAN)
+  # 1. DIRECT & LOCAL FIRST
+#- RULE-SET,rule_Direct,DIRECT
+- RULE-SET,rule_Indo,🇮🇩 SERVER ID
+#- RULE-SET,rule_lancidr,DIRECT
+  
+  # 2. SECURITY & BLOCKING
+- RULE-SET,rule_hijacking,REJECT
+#- RULE-SET,rule_malicious,REJECT
+#- RULE-SET,rule_maliciousip,REJECT
+- RULE-SET,rule_porn,🔞 PORN
+#- RULE-SET,rule_nsfw,REJECT
+#- RULE-SET,rule_falsepositive,DIRECT
+  
+  # 3. ADS BLOCKING
+- RULE-SET,rule_basicads,🚫 ADS BLOCK
+- RULE-SET,rule_personalads,🚫 ADS BLOCK
+  
+  # 4. PRIVACY
+- RULE-SET,rule_privacy,🛡️ FILTER
+  
+  # 5. SOCIAL MEDIA
+- RULE-SET,rule_Sosmed,🚀 PROXY
+- RULE-SET,rule_telegram,🚀 PROXY
+- RULE-SET,rule_telegramcidr,🚀 PROXY
+- RULE-SET,rule_tiktok,🚀 PROXY
+- RULE-SET,rule_twitter,🚀 PROXY
+- RULE-SET,rule_line,🚀 PROXY
+- RULE-SET,rule_discord,🚀 PROXY
+  
+  # 6. STREAMING SERVICES
+- RULE-SET,rule_Streaming,📺 STREAMING
+- RULE-SET,rule_Youtube,📺 STREAMING
+- RULE-SET,rule_netflix,📺 STREAMING
+- RULE-SET,rule_disneyplus,📺 STREAMING
+- RULE-SET,rule_primevideo,📺 STREAMING
+- RULE-SET,rule_hbo,📺 STREAMING
+- RULE-SET,rule_hboasia,📺 STREAMING
+- RULE-SET,rule_hbohk,📺 STREAMING
+- RULE-SET,rule_hbousa,📺 STREAMING
+- RULE-SET,rule_iqiyi,📺 STREAMING
+- RULE-SET,rule_iqiyiinter,📺 STREAMING
+- RULE-SET,rule_twitch,📺 STREAMING
+  
+  # 7. GAMING
+- RULE-SET,rule_Gaming,🕹️ GAME
+- RULE-SET,rule_games,🕹️ GAME
+- RULE-SET,rule_metaverse,🕹️ GAME
+- RULE-SET,rule_portgames,🕹️ GAME
+  
+  # 8. UTILITIES
+- RULE-SET,rule_videoconferences,🚀 PROXY
+- RULE-SET,rule_Speedtest,🚀 PROXY
+- RULE-SET,rule_playstore,🚀 PROXY
+  
+  # 9. UMUM/CATCH-ALL
+- RULE-SET,rule_umum,🚀 PROXY
+#- DOMAIN- SUFFIX,seabank.co.id,🇮🇩 SERVER ID
+- DOMAIN-SUFFIX,orderkuota.com,🇮🇩 SERVER ID
+- DOMAIN-SUFFIX,isipulsa.web.id,🇮🇩 SERVER ID
+  # FINAL MATC
+- MATCH,🚀 PROXY
