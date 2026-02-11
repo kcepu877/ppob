@@ -1,0 +1,80 @@
+proxies:
+  - name: BIZ TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: ID KING TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true

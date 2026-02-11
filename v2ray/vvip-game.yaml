@@ -1,0 +1,1225 @@
+proxies:
+  - name: SG NM ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO ILPED
+    server: ads.ruangguru.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: SG NM EDU
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ EDU
+    server: 104.17.3.81
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO EDU
+    server: 104.17.3.81
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP EDU
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: SG NM GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: SG NM GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: SG NM TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - TIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: SG NM WA
+    server: 104.18.1.196
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ WA
+    server: 104.18.1.196
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO WA
+    server: 104.18.1.196
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP WA
+    server: 104.18.1.196
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: SG NM SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: SG NM APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - APPSF
+    server: go.appsflyer.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: SG NM AVA
+    server: ava.game.naver.com
+    port: 443
+    type: trojan
+    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    skip-cert-verify: true
+    sni: newmedia.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: newmedia.garudabangsa.web.id
+    udp: true
+  - name: BIZ AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vless
+    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: BIZ 2 AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: biznet.garudabangsa.web.id
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: biznet.garudabangsa.web.id
+    udp: true
+  - name: SG KING AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: ID KING AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: SG-DO AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vless
+    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: VVIP AVA
+    server: ava.game.naver.com
+    port: 443
+    type: trojan
+    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    skip-cert-verify: true
+    sni: sgsuper-prem.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: sgsuper-prem.c-bnn.xyz
+    udp: true
+  - name: ID AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: indo-vip.vpntun.cloud
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: indo-vip.vpntun.cloud
+    udp: true
+  - name: ID - CF - AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
