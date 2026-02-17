@@ -1,4 +1,37 @@
-  - name: ID - CF - EDU
+proxies:
+  - name: SG KING EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+- name: ID - CF - EDU
     server: 104.17.3.81
     port: 443
     type: vmess
