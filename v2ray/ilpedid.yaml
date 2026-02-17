@@ -31,3 +31,19 @@ proxies:
       headers:
         Host: techno.c-bnn.xyz
     udp: true
+  - name: ID KOMINFO ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
