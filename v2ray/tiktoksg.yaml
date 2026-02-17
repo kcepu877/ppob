@@ -1,18 +1,5 @@
 proxies:
-  - name: SG NM TIKTOK
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: trojan
-    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
-    skip-cert-verify: true
-    sni: newmedia.garudabangsa.web.id
-    network: ws
-    ws-opts:
-      path: /trojan-ws
-      headers:
-        Host: newmedia.garudabangsa.web.id
-    udp: true
-  - name: SG KING TIKTOK
+  - name: SG KING TEIKTOK
     server: api24-normal.tiktokv.com
     port: 443
     type: vmess
@@ -28,12 +15,22 @@ proxies:
       headers:
         Host: vvip.kingstores.site
     udp: true
-  - name: SG-DO TIKTOK
+  - name: SG NM TEIKTOK
     server: api24-normal.tiktokv.com
     port: 443
-    type: vless
-    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
     cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
     tls: true
     skip-cert-verify: true
     servername: sgsuper-prem.c-bnn.xyz
