@@ -1,5 +1,721 @@
-vmess://eyJhZGQiOiIxMDQuMTcuMy44MSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0Ijoia29taW5mby5nYXJ1ZGFiYW5nc2Eud2ViLmlkIiwiaWQiOiJmN2NjZjRiYS03NWNiLTQwMzItOTZkOC03YmFjYzMzNTFhZTIiLCJuZXQiOiJ3cyIsInBhdGgiOiIvdm1lc3MiLCJwb3J0IjoiNDQzIiwicHMiOiJJRCBLT01JTkZPIEVEVSIsInNjeSI6ImF1dG8iLCJzbmkiOiJrb21pbmZvLmdhcnVkYWJhbmdzYS53ZWIuaWQiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-vmess://eyJhZGQiOiIxMDQuMTcuMy44MSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoidnZpcC5raW5nc3RvcmVzLnNpdGUiLCJpZCI6IjZhYjUyOTkyLTU1MmEtNDdhOC1hZDVhLTUyNzQwOTQ3YjMxMiIsIm5ldCI6IndzIiwicGF0aCI6Ii92bWVzcyIsInBvcnQiOiI0NDMiLCJwcyI6IlNHIEtJTkcgRURVIiwic2N5IjoiYXV0byIsInNuaSI6InZ2aXAua2luZ3N0b3Jlcy5zaXRlIiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
-vmess://eyJhZGQiOiIxMDQuMTcuMy44MSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoiY2xvdWRwcm94eS5jLWJubi54eXoiLCJpZCI6IjBmYmY0ZjgxLTI1OTgtNGI2YS1hNjIzLTBlYWQ0Y2I5ZWZhOCIsIm5ldCI6IndzIiwicGF0aCI6Ii9GcmVlLUNGLVByb3h5LTIwMy4xOTQuMTEyLjExOS0yMDUzIiwicG9ydCI6IjQ0MyIsInBzIjoiIElEIC0gQ0YgLSBFRFUiLCJzY3kiOiJ6ZXJvIiwic25pIjoiY2xvdWRwcm94eS5jLWJubi54eXoiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-vmess://eyJhZGQiOiIxMDQuMTcuMy44MSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoibmV3bWVkaWEuZ2FydWRhYmFuZ3NhLndlYi5pZCIsImlkIjoiZGI3MzUzNDMtMGUxOS00NTVlLWEwODMtMmNkMmQ3NzA4OWU2IiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzIiwicG9ydCI6IjQ0MyIsInBzIjoiU0cgTk0gRURVIiwic2N5IjoiYXV0byIsInNuaSI6Im5ld21lZGlhLmdhcnVkYWJhbmdzYS53ZWIuaWQiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiIiwidiI6IjIifQ==
-vmess://eyJhZGQiOiIxMDQuMTcuMy44MSIsImFpZCI6IjAiLCJhbHBuIjoiIiwiZnAiOiIiLCJob3N0IjoidGVjaG5vLmMtYm5uLnh5eiIsImlkIjoiOGJmMzM1ZmQtMWViNS00ODU4LTk3ZGEtNjNmMzM1NzFmMTdkIiwibmV0Ijoid3MiLCJwYXRoIjoiL3ZtZXNzIiwicG9ydCI6IjQ0MyIsInBzIjoiSUQgVEVDSE5PIEVEVSIsInNjeSI6ImF1dG8iLCJzbmkiOiJ0ZWNobm8uYy1ibm4ueHl6IiwidGxzIjoidGxzIiwidHlwZSI6IiIsInYiOiIyIn0=
+proxies:
+  - name: ID - CF - ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM ILPED
+    server: io.ruangguru.com
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+  - name: ID - CF - GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM GOPAY
+    server: app.gopay.co.id
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+  - name: ID - CF - APPS
+    server: go.appsflayer.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO APPS
+    server: go.appsflayer.com
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO APPS
+    server: go.appsflayer.com
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING APPS
+    server: go.appsflayer.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM APPS
+    server: go.appsflayer.com
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+  - name: ID - CF - AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM AVA
+    server: ava.game.naver.com
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+  - name: ID - CF - SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM SPOTIFY
+    server: investors.spotify.com
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+  - name: ID - CF - TEIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO TEIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO TEIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING TEIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM TEIKTOK
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+  - name: ID - CF - WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM WA
+    server: 104.18.1.196
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+  - name: ID - CF - GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM GRAB
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
+  - name: ID - CF - EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: cloudproxy.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /Free-CF-Proxy-203.194.112.119-2053
+      headers:
+        Host: cloudproxy.c-bnn.xyz
+    udp: true
+  - name: ID TECHNO EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: techno.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: techno.c-bnn.xyz
+    udp: true
+  - name: ID KOMINFO EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: kominfo.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: kominfo.c-bnn.xyz
+    udp: true
+  - name: SG KING EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: vvip.kingstores.site
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: vvip.kingstores.site
+    udp: true
+  - name: SG NM EDU
+    server: 104.17.3.81
+    port: 443
+    type: vmess
+    uuid: db735343-0e19-455e-a083-2cd2d77089e6
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: newmedia.c-bnn.xyz
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: newmedia.c-bnn.xyz
+    udp: true
