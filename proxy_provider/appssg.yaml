@@ -1,58 +1,113 @@
 proxies:
-  - name: SG NM APPSF
+  - name: AFR APPS SG
     server: go.appsflyer.com
     port: 443
     type: trojan
-    password: 20fd1f8f-9a79-4a0a-aade-a4436e155843
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: newmedia.garudabangsa.web.id
+    sni: afrcloud07.mmv.kr
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /167.71.198.82=8443
       headers:
-        Host: newmedia.garudabangsa.web.id
+        Host: afrcloud07.mmv.kr
     udp: true
-  - name: SG KING APPSF
+  - name: AFR APPS SG 2
     server: go.appsflyer.com
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    sni: afrcloud07.mmv.kr
     network: ws
     ws-opts:
-      path: /vmess
+      path: /47.74.254.191=8900
       headers:
-        Host: vvip.kingstores.site
+        Host: afrcloud07.mmv.kr
     udp: true
-  - name: SG-DO APPSF
+  - name: FYR APPS SG
     server: go.appsflyer.com
     port: 443
     type: vless
-    uuid: 78bcddae-0fab-4243-a39a-6a889779d51b
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: sgsuper-prem.c-bnn.xyz
+    servername: fairy.starlite.web.id
     network: ws
     ws-opts:
-      path: /vless
+      path: /167.71.198.82-8443
       headers:
-        Host: sgsuper-prem.c-bnn.xyz
+        Host: fairy.starlite.web.id
     udp: true
-  - name: VVIP APPSF
+  - name: FYR APPS SG 2
     server: go.appsflyer.com
     port: 443
     type: trojan
-    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: sgsuper-prem.c-bnn.xyz
+    sni: fairy.starlite.web.id
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /47.74.254.191-8900
       headers:
-        Host: sgsuper-prem.c-bnn.xyz
+        Host: fairy.starlite.web.id
+    udp: true
+  - name: FYR APPS SG 3
+    server: go.appsflyer.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: fairy.starlite.web.id
+    network: ws
+    ws-opts:
+      path: /167.71.198.82-8443
+      headers:
+        Host: fairy.starlite.web.id
+    udp: true
+  - name: FYR APPS SG 4
+    server: go.appsflyer.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: fairy.starlite.web.id
+    network: ws
+    ws-opts:
+      path: /47.74.254.191-8900
+      headers:
+        Host: fairy.starlite.web.id
+    udp: true
+  - name: AFR APPS SG 3
+    server: go.appsflyer.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: afrcloud07.mmv.kr
+    network: ws
+    ws-opts:
+      path: /167.71.198.82=8443
+      headers:
+        Host: afrcloud07.mmv.kr
+    udp: true
+  - name: AFR APPS SG 4
+    server: go.appsflyer.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: afrcloud07.mmv.kr
+    network: ws
+    ws-opts:
+      path: /47.74.254.191=8900
+      headers:
+        Host: afrcloud07.mmv.kr
     udp: true
