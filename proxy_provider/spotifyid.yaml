@@ -1,80 +1,113 @@
 proxies:
-  - name: BIZ SPOTIFY
+  - name: AFR SPOTIFY ID
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: afrcloud07.mmv.kr
+    network: ws
+    ws-opts:
+      path: /103.6.207.108=8080
+      headers:
+        Host: afrcloud07.mmv.kr
+    udp: true
+  - name: AFR SPOTIFY ID 2
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: afrcloud07.mmv.kr
+    network: ws
+    ws-opts:
+      path: /36.95.152.58=12137
+      headers:
+        Host: afrcloud07.mmv.kr
+    udp: true
+  - name: FYR SPOTIFY ID
     server: investors.spotify.com
     port: 443
     type: vless
-    uuid: fe604988-b3e7-4c49-a46f-efde93fe064e
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: biznet.garudabangsa.web.id
+    servername: fairy.starlite.web.id
     network: ws
     ws-opts:
-      path: /vless
+      path: /36.95.152.58-12137
       headers:
-        Host: biznet.garudabangsa.web.id
+        Host: fairy.starlite.web.id
     udp: true
-  - name: BIZ 2 SPOTIFY
+  - name: FYR SPOTIFY ID 2
     server: investors.spotify.com
     port: 443
-    type: vmess
-    uuid: 168b67c3-9b46-4a7e-8d68-1f679c14434b
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: biznet.garudabangsa.web.id
+    sni: fairy.starlite.web.id
     network: ws
     ws-opts:
-      path: /vmess
+      path: /36.95.152.58-12137
       headers:
-        Host: biznet.garudabangsa.web.id
+        Host: fairy.starlite.web.id
     udp: true
-  - name: ID KING SPOTIFY
+  - name: FYR SPOTIFY ID 3
     server: investors.spotify.com
     port: 443
-    type: vmess
-    uuid: a05c2fbd-cec7-4612-8257-25185597cf9d
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: indo-vip.vpntun.cloud
+    sni: fairy.starlite.web.id
     network: ws
     ws-opts:
-      path: /vmess
+      path: /103.6.207.108-8080
       headers:
-        Host: indo-vip.vpntun.cloud
+        Host: fairy.starlite.web.id
     udp: true
-  - name: ID SPOTIFY
+  - name: FYR SPOTIFY ID 4
     server: investors.spotify.com
     port: 443
-    type: vmess
-    uuid: e0bb705a-d5d4-4fe2-a466-e275e3fcbe25
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: indo-vip.vpntun.cloud
+    servername: fairy.starlite.web.id
     network: ws
     ws-opts:
-      path: /vmess
+      path: /103.6.207.108-8080
       headers:
-        Host: indo-vip.vpntun.cloud
+        Host: fairy.starlite.web.id
     udp: true
-  - name: ID - CF - SPOTIFY
+  - name: AFR SPOTIFY ID 3
     server: investors.spotify.com
     port: 443
-    type: vmess
-    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: cloudproxy.c-bnn.xyz
+    servername: afrcloud07.mmv.kr
     network: ws
     ws-opts:
-      path: /Free-CF-Proxy-203.194.112.119-2053
+      path: /36.95.152.58=12137
       headers:
-        Host: cloudproxy.c-bnn.xyz
+        Host: afrcloud07.mmv.kr
+    udp: true
+  - name: AFR SPOTIFY ID 4
+    server: investors.spotify.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: afrcloud07.mmv.kr
+    network: ws
+    ws-opts:
+      path: /36.95.152.58=12137
+      headers:
+        Host: afrcloud07.mmv.kr
     udp: true
