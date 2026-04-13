@@ -1,31 +1,18 @@
 proxies:
-  - name: AFR WA ID
+  - name: "[Trojan] WA ID"
     server: 104.18.1.196
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /103.6.207.108=8080
+      path: /ID
       headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: AFR WA ID 2
-    server: 104.18.1.196
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR WA ID
+  - name: "[Vless] WA ID"
     server: 104.18.1.196
     port: 443
     type: vless
@@ -33,81 +20,10 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fairy.starlite.web.id
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58-12137
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR WA ID 2
-    server: 104.18.1.196
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR WA ID 3
-    server: 104.18.1.196
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR WA ID 4
-    server: 104.18.1.196
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR WA ID 3
-    server: 104.18.1.196
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR WA ID 4
-    server: 104.18.1.196
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true

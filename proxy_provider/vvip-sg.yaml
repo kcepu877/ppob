@@ -1,31 +1,244 @@
 proxies:
-  - name: AFR EDU SG
+  - name: "[Trojan] APPS SG"
+    server: go.appsflyer.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] APPS SG"
+    server: go.appsflyer.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] AVA SG"
+    server: ava.game.naver.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] AVA SG"
+    server: ava.game.naver.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] GOPAY SG"
+    server: app.gopay.co.id
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] GOPAY SG"
+    server: app.gopay.co.id
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
+  - name: "[Trojan] TIKTOK SG"
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] TIKTOK SG"
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
+  - name: "[Trojan] WA SG"
+    server: 104.18.1.196
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] WA SG"
+    server: 104.18.1.196
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] SPOTIFY SG"
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] SPOTIFY SG"
+    server: investors.spotify.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] ILPED SG"
+    server: io.ruangguru.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] ILPED SG"
+    server: io.ruangguru.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] GRAB SG"
+    server: grabacademyportal.grab.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] GRAB SG"
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+   - name: "[Trojan] EDU SG"
     server: 104.17.3.81
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /167.71.198.82=8443
+      path: /SG
       headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: AFR EDU SG 2
-    server: 104.17.3.81
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /47.74.254.191=8900
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR EDU SG
+  - name: "[Vless] EDU SG"
     server: 104.17.3.81
     port: 443
     type: vless
@@ -33,81 +246,10 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fairy.starlite.web.id
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /167.71.198.82-8443
+      path: /SG
       headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR EDU SG 2
-    server: 104.17.3.81
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /47.74.254.191-8900
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR EDU SG 3
-    server: 104.17.3.81
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /167.71.198.82-8443
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR EDU SG 4
-    server: 104.17.3.81
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /47.74.254.191-8900
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR EDU SG 3
-    server: 104.17.3.81
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /167.71.198.82=8443
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR EDU SG 4
-    server: 104.17.3.81
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /47.74.254.191=8900
-      headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true

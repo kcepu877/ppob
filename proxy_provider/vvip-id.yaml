@@ -1,31 +1,18 @@
 proxies:
-  - name: AFR APPS ID
+  - name: "[Trojan] APPS ID"
     server: go.appsflyer.com
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /103.6.207.108=8080
+      path: /ID
       headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: AFR APPS ID 2
-    server: go.appsflyer.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR APPS ID
+  - name: "[Vless] APPS ID"
     server: go.appsflyer.com
     port: 443
     type: vless
@@ -33,111 +20,27 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fairy.starlite.web.id
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58-12137
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: FYR APPS ID 2
-    server: go.appsflyer.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR APPS ID 3
-    server: go.appsflyer.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR APPS ID 4
-    server: go.appsflyer.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR APPS ID 3
-    server: go.appsflyer.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR APPS ID 4
-    server: go.appsflyer.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR AVA ID
+  - name: "[Trojan] AVA ID"
     server: ava.game.naver.com
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /103.6.207.108=8080
+      path: /ID
       headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: AFR AVA ID 2
-    server: ava.game.naver.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR AVA ID
+  - name: "[Vless] AVA ID"
     server: ava.game.naver.com
     port: 443
     type: vless
@@ -145,223 +48,27 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fairy.starlite.web.id
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58-12137
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: FYR AVA ID 2
-    server: ava.game.naver.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR AVA ID 3
-    server: ava.game.naver.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR AVA ID 4
-    server: ava.game.naver.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR AVA ID 3
-    server: ava.game.naver.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR AVA ID 4
-    server: ava.game.naver.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR EDU ID
-    server: 104.17.3.81
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /103.6.207.108=8080
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR EDU ID 2
-    server: 104.17.3.81
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR EDU ID
-    server: 104.17.3.81
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR EDU ID 2
-    server: 104.17.3.81
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR EDU ID 3
-    server: 104.17.3.81
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR EDU ID 4
-    server: 104.17.3.81
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR EDU ID 3
-    server: 104.17.3.81
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR EDU ID 4
-    server: 104.17.3.81
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR GOPAY ID
+  - name: "[Trojan] GOPAY ID"
     server: app.gopay.co.id
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /103.6.207.108=8080
+      path: /ID
       headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: AFR GOPAY ID 2
-    server: app.gopay.co.id
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR GOPAY ID
+  - name: "[Vless] GOPAY ID"
     server: app.gopay.co.id
     port: 443
     type: vless
@@ -369,447 +76,28 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fairy.starlite.web.id
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58-12137
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: FYR GOPAY ID 2
-    server: app.gopay.co.id
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR GOPAY ID 3
-    server: app.gopay.co.id
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR GOPAY ID 4
-    server: app.gopay.co.id
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR GOPAY ID 3
-    server: app.gopay.co.id
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR GOPAY ID 4
-    server: app.gopay.co.id
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR GRAB ID
-    server: grabacademyportal.grab.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /103.6.207.108=8080
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR GRAB ID 2
-    server: grabacademyportal.grab.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR GRAB ID
-    server: grabacademyportal.grab.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR GRAB ID 2
-    server: grabacademyportal.grab.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR GRAB ID 3
-    server: grabacademyportal.grab.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR GRAB ID 4
-    server: grabacademyportal.grab.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR GRAB ID 3
-    server: grabacademyportal.grab.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR GRAB ID 4
-    server: grabacademyportal.grab.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR ILPED ID
-    server: io.ruangguru.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /103.6.207.108=8080
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR ILPED ID 2
-    server: io.ruangguru.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR ILPED ID
-    server: io.ruangguru.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR ILPED ID 2
-    server: io.ruangguru.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR ILPED ID 3
-    server: io.ruangguru.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR ILPED ID 4
-    server: io.ruangguru.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR ILPED ID 3
-    server: io.ruangguru.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR ILPED ID 4
-    server: io.ruangguru.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR SPOTIFY ID
-    server: investors.spotify.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /103.6.207.108=8080
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR SPOTIFY ID 2
-    server: investors.spotify.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR SPOTIFY ID
-    server: investors.spotify.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR SPOTIFY ID 2
-    server: investors.spotify.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR SPOTIFY ID 3
-    server: investors.spotify.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR SPOTIFY ID 4
-    server: investors.spotify.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR SPOTIFY ID 3
-    server: investors.spotify.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR SPOTIFY ID 4
-    server: investors.spotify.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR TIKTOK ID
+
+  - name: "[Trojan] TIKTOK ID"
     server: api24-normal.tiktokv.com
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /103.6.207.108=8080
+      path: /ID
       headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: AFR TIKTOK ID 2
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: FYR TIKTOK ID
+  - name: "[Vless] TIKTOK ID"
     server: api24-normal.tiktokv.com
     port: 443
     type: vless
@@ -817,193 +105,151 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fairy.starlite.web.id
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58-12137
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: FYR TIKTOK ID 2
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /36.95.152.58-12137
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR TIKTOK ID 3
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: FYR TIKTOK ID 4
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: fairy.starlite.web.id
-    network: ws
-    ws-opts:
-      path: /103.6.207.108-8080
-      headers:
-        Host: fairy.starlite.web.id
-    udp: true
-  - name: AFR TIKTOK ID 3
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR TIKTOK ID 4
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR WA ID
+
+  - name: "[Trojan] WA ID"
     server: 104.18.1.196
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /103.6.207.108=8080
+      path: /ID
       headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: AFR WA ID 2
+  - name: "[Vless] WA ID"
     server: 104.18.1.196
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] SPOTIFY ID"
+    server: investors.spotify.com
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: afrcloud07.mmv.kr
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58=12137
+      path: /ID
       headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: FYR WA ID
-    server: 104.18.1.196
+  - name: "[Vless] SPOTIFY ID"
+    server: investors.spotify.com
     port: 443
     type: vless
     uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fairy.starlite.web.id
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58-12137
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: FYR WA ID 2
-    server: 104.18.1.196
+  - name: "[Trojan] ILPED ID"
+    server: io.ruangguru.com
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: fairy.starlite.web.id
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58-12137
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: FYR WA ID 3
-    server: 104.18.1.196
+  - name: "[Vless] ILPED ID"
+    server: io.ruangguru.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] GRAB ID"
+    server: grabacademyportal.grab.com
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: fairy.starlite.web.id
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /103.6.207.108-8080
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: FYR WA ID 4
-    server: 104.18.1.196
+  - name: "[Vless] GRAB ID"
+    server: grabacademyportal.grab.com
     port: 443
     type: vless
     uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: fairy.starlite.web.id
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /103.6.207.108-8080
+      path: /ID
       headers:
-        Host: fairy.starlite.web.id
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: AFR WA ID 3
-    server: 104.18.1.196
+   - name: "[Trojan] EDU ID"
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] EDU ID"
+    server: 104.17.3.81
     port: 443
     type: vless
     uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /36.95.152.58=12137
+      path: /ID
       headers:
-        Host: afrcloud07.mmv.kr
-    udp: true
-  - name: AFR WA ID 4
-    server: 104.18.1.196
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: afrcloud07.mmv.kr
-    network: ws
-    ws-opts:
-      path: /36.95.152.58=12137
-      headers:
-        Host: afrcloud07.mmv.kr
+        Host: 2.wakako8989.workers.dev
     udp: true

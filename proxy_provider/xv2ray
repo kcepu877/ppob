@@ -1,6 +1,6 @@
 proxies:
-  - name: "[Trojan] APPS MY"
-    server: go.appsflyer.com
+  - name: "[Trojan] TIKTOK ID"
+    server: api24-normal.tiktokv.com
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
@@ -8,12 +8,12 @@ proxies:
     sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /MY
+      path: /ID
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-  - name: "[Vless] APPS MY"
-    server: go.appsflyer.com
+  - name: "[Vless] TIKTOK ID"
+    server: api24-normal.tiktokv.com
     port: 443
     type: vless
     uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
@@ -23,63 +23,7 @@ proxies:
     servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /MY
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Trojan] AVA MY"
-    server: ava.game.naver.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /MY
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Vless] AVA MY"
-    server: ava.game.naver.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /MY
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Trojan] GOPAY MY"
-    server: app.gopay.co.id
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /MY
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Vless] GOPAY MY"
-    server: app.gopay.co.id
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /MY
+      path: /ID
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
@@ -113,6 +57,35 @@ proxies:
         Host: 2.wakako8989.workers.dev
     udp: true
 
+  - name: "[Trojan] WA ID"
+    server: 104.18.1.196
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] WA ID"
+    server: 104.18.1.196
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
   - name: "[Trojan] WA MY"
     server: 104.18.1.196
     port: 443
@@ -141,6 +114,37 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
+
+
+  - name: "[Trojan] SPOTIFY ID"
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] SPOTIFY ID"
+    server: investors.spotify.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
   - name: "[Trojan] SPOTIFY MY"
     server: investors.spotify.com
     port: 443
@@ -169,6 +173,36 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
+
+  - name: "[Trojan] ILPED ID"
+    server: io.ruangguru.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] ILPED ID"
+    server: io.ruangguru.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
   - name: "[Trojan] ILPED MY"
     server: io.ruangguru.com
     port: 443
@@ -196,7 +230,36 @@ proxies:
       path: /MY
       headers:
         Host: 2.wakako8989.workers.dev
+    udp: true    
+  - name: "[Trojan] GRAB ID"
+    server: grabacademyportal.grab.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
     udp: true
+  - name: "[Vless] GRAB ID"
+    server: grabacademyportal.grab.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
   - name: "[Trojan] GRAB MY"
     server: grabacademyportal.grab.com
     port: 443
@@ -225,8 +288,37 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-   - name: "[Trojan] EDU MY"
-    server: 104.17.3.81
+  - name: "[Trojan] GOPAY ID"
+    server: app.gopay.co.id
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] GOPAY ID"
+    server: app.gopay.co.id
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
+  - name: "[Trojan] GOPAY MY"
+    server: app.gopay.co.id
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
@@ -238,8 +330,66 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-  - name: "[Vless] EDU MY"
-    server: 104.17.3.81
+  - name: "[Vless] GOPAY MY"
+    server: app.gopay.co.id
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /MY
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
+  - name: "[Trojan] AVA ID"
+    server: ava.game.naver.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] AVA ID"
+    server: ava.game.naver.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /ID
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+
+  - name: "[Trojan] AVA MY"
+    server: ava.game.naver.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /MY
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] AVA MY"
+    server: ava.game.naver.com
     port: 443
     type: vless
     uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
@@ -281,65 +431,9 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-  - name: "[Trojan] AVA ID"
-    server: ava.game.naver.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Vless] AVA ID"
-    server: ava.game.naver.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Trojan] GOPAY ID"
-    server: app.gopay.co.id
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Vless] GOPAY ID"
-    server: app.gopay.co.id
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
 
-  - name: "[Trojan] TIKTOK ID"
-    server: api24-normal.tiktokv.com
+  - name: "[Trojan] APPS MY"
+    server: go.appsflyer.com
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
@@ -347,12 +441,12 @@ proxies:
     sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /ID
+      path: /MY
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-  - name: "[Vless] TIKTOK ID"
-    server: api24-normal.tiktokv.com
+  - name: "[Vless] APPS MY"
+    server: go.appsflyer.com
     port: 443
     type: vless
     uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
@@ -362,124 +456,11 @@ proxies:
     servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /ID
+      path: /MY
       headers:
         Host: 2.wakako8989.workers.dev
-    udp: true
-
-  - name: "[Trojan] WA ID"
-    server: 104.18.1.196
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Vless] WA ID"
-    server: 104.18.1.196
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Trojan] SPOTIFY ID"
-    server: investors.spotify.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Vless] SPOTIFY ID"
-    server: investors.spotify.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Trojan] ILPED ID"
-    server: io.ruangguru.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Vless] ILPED ID"
-    server: io.ruangguru.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Trojan] GRAB ID"
-    server: grabacademyportal.grab.com
-    port: 443
-    type: trojan
-    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
-    skip-cert-verify: true
-    sni: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-  - name: "[Vless] GRAB ID"
-    server: grabacademyportal.grab.com
-    port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
-    network: ws
-    ws-opts:
-      path: /ID
-      headers:
-        Host: 2.wakako8989.workers.dev
-    udp: true
-   - name: "[Trojan] EDU ID"
+    udp: true    
+  - name: "[Trojan] EDU ID"
     server: 104.17.3.81
     port: 443
     type: trojan
@@ -507,3 +488,32 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
+
+  - name: "[Trojan] EDU MY"
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /MY
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] EDU MY"
+    server: 104.17.3.81
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /MY
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true   
