@@ -1,289 +1,255 @@
 proxies:
-  - name: SG KING ILPED
-    server: io.ruangguru.com
+  - name: "[Trojan] APPS SG"
+    server: go.appsflyer.com
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] APPS SG"
+    server: go.appsflyer.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: vvip.kingstores.site
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG NM ILPED
-    server: io.ruangguru.com
-    port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: newmedia.c-bnn.xyz
-    udp: true
-  - name: SG KING GOPAY
-    server: app.gopay.co.id
-    port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vvip.kingstores.site
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: vvip.kingstores.site
-    udp: true
-  - name: SG NM GOPAY
-    server: app.gopay.co.id
-    port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: newmedia.c-bnn.xyz
-    udp: true
-  - name: SG KING APPS
-    server: go.appsflayer.com
-    port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vvip.kingstores.site
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: vvip.kingstores.site
-    udp: true
-  - name: SG NM APPS
-    server: go.appsflayer.com
-    port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: newmedia.c-bnn.xyz
-    udp: true
-  - name: SG KING AVA
+  - name: "[Trojan] AVA SG"
     server: ava.game.naver.com
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: vvip.kingstores.site
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG NM AVA
+  - name: "[Vless] AVA SG"
     server: ava.game.naver.com
     port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: newmedia.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG KING SPOTIFY
-    server: investors.spotify.com
+  - name: "[Trojan] GOPAY SG"
+    server: app.gopay.co.id
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: vvip.kingstores.site
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG NM SPOTIFY
-    server: investors.spotify.com
+  - name: "[Vless] GOPAY SG"
+    server: app.gopay.co.id
     port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: newmedia.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG KING TEIKTOK
+
+  - name: "[Trojan] TIKTOK SG"
     server: api24-normal.tiktokv.com
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: vvip.kingstores.site
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG NM TEIKTOK
+  - name: "[Vless] TIKTOK SG"
     server: api24-normal.tiktokv.com
     port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: newmedia.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG KING WA
+
+  - name: "[Trojan] WA SG"
     server: 104.18.1.196
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: vvip.kingstores.site
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG NM WA
+  - name: "[Vless] WA SG"
     server: 104.18.1.196
     port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: newmedia.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG KING GRAB
+  - name: "[Trojan] SPOTIFY SG"
+    server: investors.spotify.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] SPOTIFY SG"
+    server: investors.spotify.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] ILPED SG"
+    server: io.ruangguru.com
+    port: 443
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
+    skip-cert-verify: true
+    sni: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] ILPED SG"
+    server: io.ruangguru.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Trojan] GRAB SG"
     server: grabacademyportal.grab.com
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: vvip.kingstores.site
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG NM GRAB
+  - name: "[Vless] GRAB SG"
     server: grabacademyportal.grab.com
     port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: newmedia.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG KING EDU
+   - name: "[Trojan] EDU SG"
     server: 104.17.3.81
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: vvip.kingstores.site
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG NM EDU
+  - name: "[Vless] EDU SG"
     server: 104.17.3.81
     port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: newmedia.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true

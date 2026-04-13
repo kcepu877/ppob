@@ -1,55 +1,29 @@
 proxies:
-  - name: SG KING TEIKTOK
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: vvip.kingstores.site
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: vvip.kingstores.site
-    udp: true
-  - name: SG NM TEIKTOK
-    server: api24-normal.tiktokv.com
-    port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: newmedia.c-bnn.xyz
-    udp: true
-    tls: true
-    skip-cert-verify: true
-    servername: sgsuper-prem.c-bnn.xyz
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: sgsuper-prem.c-bnn.xyz
-    udp: true
-  - name: VVIP TIKTOK
+  - name: "[Trojan] TIKTOK SG"
     server: api24-normal.tiktokv.com
     port: 443
     type: trojan
-    password: 58d389fb-18d6-46c9-8088-6f0d95a8de06
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    sni: sgsuper-prem.c-bnn.xyz
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /trojan-ws
+      path: /SG
       headers:
-        Host: sgsuper-prem.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
+    udp: true
+  - name: "[Vless] TIKTOK SG"
+    server: api24-normal.tiktokv.com
+    port: 443
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: 2.wakako8989.workers.dev
+    network: ws
+    ws-opts:
+      path: /SG
+      headers:
+        Host: 2.wakako8989.workers.dev
     udp: true

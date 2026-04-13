@@ -1,49 +1,29 @@
 proxies:
-  - name: ID - CF - AVA
+  - name: "[Trojan] AVA ID"
     server: ava.game.naver.com
     port: 443
-    type: vmess
-    uuid: 0fbf4f81-2598-4b6a-a623-0ead4cb9efa8
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: cloudproxy.c-bnn.xyz
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /Free-CF-Proxy-203.194.112.119-2053
+      path: /ID
       headers:
-        Host: cloudproxy.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: ID TECHNO AVA
+  - name: "[Vless] AVA ID"
     server: ava.game.naver.com
     port: 443
-    type: vmess
-    uuid: 8bf335fd-1eb5-4858-97da-63f33571f17d
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: techno.c-bnn.xyz
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /ID
       headers:
-        Host: techno.c-bnn.xyz
-    udp: true
-  - name: ID KOMINFO AVA
-    server: ava.game.naver.com
-    port: 443
-    type: vmess
-    uuid: f7ccf4ba-75cb-4032-96d8-7bacc3351ae2
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: kominfo.c-bnn.xyz
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: kominfo.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true

@@ -1,33 +1,29 @@
 proxies:
-  - name: SG KING EDU
+  - name: "[Trojan] EDU SG"
     server: 104.17.3.81
     port: 443
-    type: vmess
-    uuid: 6ab52992-552a-47a8-ad5a-52740947b312
-    alterId: 0
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: vvip.kingstores.site
+    sni: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: vvip.kingstores.site
+        Host: 2.wakako8989.workers.dev
     udp: true
-  - name: SG NM EDU
+  - name: "[Vless] EDU SG"
     server: 104.17.3.81
     port: 443
-    type: vmess
-    uuid: db735343-0e19-455e-a083-2cd2d77089e6
-    alterId: 0
+    type: vless
+    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: newmedia.c-bnn.xyz
+    servername: 2.wakako8989.workers.dev
     network: ws
     ws-opts:
-      path: /vmess
+      path: /SG
       headers:
-        Host: newmedia.c-bnn.xyz
+        Host: 2.wakako8989.workers.dev
     udp: true
