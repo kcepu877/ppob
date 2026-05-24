@@ -143,42 +143,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60   
-  AVA-ID: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/avaid.yaml"
-    path: "./proxy_provider/avaid.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 60
-  AVA-SG: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/avasg.yaml"
-    path: "./proxy_provider/avasg.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 60  
-  WA-ID: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/waid.yaml"
-    path: "./proxy_provider/waid.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 60
-  WA-SG: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/wasg.yaml"
-    path: "./proxy_provider/wasg.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 60
   APPS-ID: 
     type: http
     behavior: domain
@@ -197,24 +161,6 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60 
-  GRAB-ID: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/grabid.yaml"
-    path: "./proxy_provider/grabid.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 60
-  GRAB-SG: 
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/grabsg.yaml"
-    path: "./proxy_provider/grabsg.yaml"
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 60
   GOPAY-ID: 
     type: http
     behavior: domain
@@ -233,25 +179,24 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60 
-  TIKTOK-ID: 
+  WA-ID: 
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/tiktokid.yaml"
-    path: "./proxy_provider/tiktokid.yaml"
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/waid.yaml"
+    path: "./proxy_provider/waid.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-  TIKTOK-SG: 
+  WA-SG: 
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/tiktoksg.yaml"
-    path: "./proxy_provider/tiktoksg.yaml"
+    url: "https://raw.githubusercontent.com/kcepu877/ppob/main/proxy_provider/wasg.yaml"
+    path: "./proxy_provider/wasg.yaml"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 60
-      
 proxy-groups:
 - name: 🚀 PROXY
   type: select
@@ -259,25 +204,21 @@ proxy-groups:
   interval: 60
   proxies:
       - ⚡ BEST PING
+      - VVIP-ID 🇮🇩
+      - VVIP-SG 🇸🇬
       - 🇮🇩 SERVER ID
       - 🇸🇬 SERVER SG
       - 🎓 EDUKASI 🇮🇩
-      - 📱 TIKTOK 🇮🇩
       - 📊 APPSFLYER 🇮🇩
-      - 💬 WhatsApp 🇮🇩
-      - 🎮 AVA-GAME 🇮🇩
       - 👛 GOPAY 🇮🇩
       - 🎵 SPOTIFY 🇮🇩
-      - 🚗 GRAB 🇮🇩
       - 📚 ILPED 🇮🇩
-      - 🎓 EDUKASI 🇸🇬
-      - 📱 TIKTOK 🇸🇬
-      - 📊 APPSFLYER 🇸🇬
+      - 💬 WhatsApp 🇮🇩
       - 💬 WhatsApp 🇸🇬
-      - 🎮 AVA-GAME 🇸🇬
+      - 🎓 EDUKASI 🇸🇬
+      - 📊 APPSFLYER 🇸🇬
       - 👛 GOPAY 🇸🇬
       - 🎵 SPOTIFY 🇸🇬
-      - 🚗 GRAB 🇸🇬
       - 📚 ILPED 🇸🇬
       - DIRECT
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
@@ -287,6 +228,8 @@ proxy-groups:
   interval: 50
   icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png
   proxies:
+    - VVIP-ID 🇮🇩
+    - VVIP-SG 🇸🇬
     - 🇮🇩 SERVER ID
     - 🇸🇬 SERVER SG
 
@@ -297,6 +240,8 @@ proxy-groups:
     - REJECT
     - DIRECT
     - ⚡ BEST PING
+    - VVIP-ID 🇮🇩
+    - VVIP-SG 🇸🇬
     - 🇮🇩 SERVER ID
     - 🇸🇬 SERVER SG
 
@@ -307,26 +252,11 @@ proxy-groups:
     - REJECT
     - DIRECT
     - ⚡ BEST PING
+    - VVIP-ID 🇮🇩
+    - VVIP-SG 🇸🇬
     - 🇮🇩 SERVER ID
     - 🇸🇬 SERVER SG
-    - 🎓 EDUKASI 🇮🇩
-    - 📱 TIKTOK 🇮🇩
-    - 📊 APPSFLYER 🇮🇩
-    - 💬 WhatsApp 🇮🇩
-    - 🎮 AVA-GAME 🇮🇩
-    - 👛 GOPAY 🇮🇩
-    - 🎵 SPOTIFY 🇮🇩
-    - 🚗 GRAB 🇮🇩
-    - 📚 ILPED 🇮🇩
-    - 🎓 EDUKASI 🇸🇬
-    - 📱 TIKTOK 🇸🇬
-    - 📊 APPSFLYER 🇸🇬
-    - 💬 WhatsApp 🇸🇬
-    - 🎮 AVA-GAME 🇸🇬
-    - 👛 GOPAY 🇸🇬
-    - 🎵 SPOTIFY 🇸🇬
-    - 🚗 GRAB 🇸🇬
-    - 📚 ILPED 🇸🇬
+
 
 - name: 🕹️ GAME
   type: select
@@ -335,25 +265,21 @@ proxy-groups:
     - REJECT
     - DIRECT
     - ⚡ BEST PING
+    - VVIP-ID 🇮🇩
+    - VVIP-SG 🇸🇬
     - 🇮🇩 SERVER ID
     - 🇸🇬 SERVER SG
-    - 🎮 AVA-GAME 🇮🇩
-    - 🎮 AVA-GAME 🇸🇬
     - 🎓 EDUKASI 🇮🇩
-    - 📱 TIKTOK 🇮🇩
     - 📊 APPSFLYER 🇮🇩
-    - 💬 WhatsApp 🇮🇩
     - 👛 GOPAY 🇮🇩
     - 🎵 SPOTIFY 🇮🇩
-    - 🚗 GRAB 🇮🇩
     - 📚 ILPED 🇮🇩
-    - 🎓 EDUKASI 🇸🇬
-    - 📱 TIKTOK 🇸🇬
-    - 📊 APPSFLYER 🇸🇬
+    - 💬 WhatsApp 🇮🇩
     - 💬 WhatsApp 🇸🇬
+    - 🎓 EDUKASI 🇸🇬
+    - 📊 APPSFLYER 🇸🇬
     - 👛 GOPAY 🇸🇬
     - 🎵 SPOTIFY 🇸🇬
-    - 🚗 GRAB 🇸🇬
     - 📚 ILPED 🇸🇬
 
 - name: 📺 STREAMING
@@ -365,24 +291,8 @@ proxy-groups:
     - ⚡ BEST PING
     - 🇸🇬 SERVER SG
     - 🇮🇩 SERVER ID
-    - 🎓 EDUKASI 🇮🇩
-    - 📱 TIKTOK 🇮🇩
-    - 📊 APPSFLYER 🇮🇩
-    - 💬 WhatsApp 🇮🇩
-    - 🎮 AVA-GAME 🇮🇩
-    - 👛 GOPAY 🇮🇩
-    - 🎵 SPOTIFY 🇮🇩
-    - 🚗 GRAB 🇮🇩
-    - 📚 ILPED 🇮🇩
-    - 🎓 EDUKASI 🇸🇬
-    - 📱 TIKTOK 🇸🇬
-    - 📊 APPSFLYER 🇸🇬
-    - 💬 WhatsApp 🇸🇬
-    - 🎮 AVA-GAME 🇸🇬
-    - 👛 GOPAY 🇸🇬
-    - 🎵 SPOTIFY 🇸🇬
-    - 🚗 GRAB 🇸🇬
-    - 📚 ILPED 🇸🇬
+    - VVIP-ID 🇮🇩
+    - VVIP-SG 🇸🇬
 
 - name: 🔞 PORN
   type: select
@@ -393,24 +303,8 @@ proxy-groups:
     - ⚡ BEST PING
     - 🇮🇩 SERVER ID
     - 🇸🇬 SERVER SG
-    - 🎓 EDUKASI 🇮🇩
-    - 📱 TIKTOK 🇮🇩
-    - 📊 APPSFLYER 🇮🇩
-    - 💬 WhatsApp 🇮🇩
-    - 🎮 AVA-GAME 🇮🇩
-    - 👛 GOPAY 🇮🇩
-    - 🎵 SPOTIFY 🇮🇩
-    - 🚗 GRAB 🇮🇩
-    - 📚 ILPED 🇮🇩
-    - 🎓 EDUKASI 🇸🇬
-    - 📱 TIKTOK 🇸🇬
-    - 📊 APPSFLYER 🇸🇬
-    - 💬 WhatsApp 🇸🇬
-    - 🎮 AVA-GAME 🇸🇬
-    - 👛 GOPAY 🇸🇬
-    - 🎵 SPOTIFY 🇸🇬
-    - 🚗 GRAB 🇸🇬
-    - 📚 ILPED 🇸🇬
+    - VVIP-ID 🇮🇩
+    - VVIP-SG 🇸🇬
 
 - name: 🇮🇩 SERVER ID
   type: url-test
@@ -419,14 +313,11 @@ proxy-groups:
   icon: https://flagcdn.com/w2560/id.png
   proxies:
     - 🎓 EDUKASI 🇮🇩
-    - 📱 TIKTOK 🇮🇩
     - 📊 APPSFLYER 🇮🇩
-    - 🎮 AVA-GAME 🇮🇩
     - 👛 GOPAY 🇮🇩
-    - 💬 WhatsApp 🇮🇩
     - 🎵 SPOTIFY 🇮🇩
     - 📚 ILPED 🇮🇩
-    - 🚗 GRAB 🇮🇩
+    - 💬 WhatsApp 🇮🇩
 
 - name: 🇸🇬 SERVER SG
   type: url-test
@@ -435,15 +326,26 @@ proxy-groups:
   icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
   proxies:
     - 🎓 EDUKASI 🇸🇬
-    - 📱 TIKTOK 🇸🇬
     - 📊 APPSFLYER 🇸🇬
-    - 💬 WhatsApp 🇸🇬
-    - 🎮 AVA-GAME 🇸🇬
     - 👛 GOPAY 🇸🇬
     - 🎵 SPOTIFY 🇸🇬
-    - 🚗 GRAB 🇸🇬
     - 📚 ILPED 🇸🇬
- 
+    - 💬 WhatsApp 🇮🇩
+      
+- name: VVIP-ID 🇮🇩
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/eduk.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - VVIP-ID
+- name: VVIP-SG 🇸🇬
+  type: url-test
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/eduk.png
+  url: http://www.gstatic.com/generate_204
+  interval: 50
+  use:
+  - VVIP-SG
 - name: 🎓 EDUKASI 🇮🇩
   type: url-test
   icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/eduk.png
@@ -458,20 +360,6 @@ proxy-groups:
   interval: 50
   use:
   - ILPED-ID
-- name: 🎮 AVA-GAME 🇮🇩
-  type: url-test
-  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/game.png
-  url: http://www.gstatic.com/generate_204
-  interval: 50
-  use:
-  - AVA-ID
-- name: 💬 WhatsApp 🇮🇩
-  type: url-test
-  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/whatsapp_779120.png
-  url: http://www.gstatic.com/generate_204
-  interval: 50
-  use:
-  - WA-ID
 - name: 🎵 SPOTIFY 🇮🇩
   type: url-test
   icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/spotify.png
@@ -493,20 +381,13 @@ proxy-groups:
   interval: 50
   use:
   - GOPAY-ID
-- name: 🚗 GRAB 🇮🇩
+- name: 💬 WhatsApp 🇮🇩
   type: url-test
-  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/grab.png
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/whatsapp_779120.png
   url: http://www.gstatic.com/generate_204
   interval: 50
   use:
-  - GRAB-ID
-- name: 📱 TIKTOK 🇮🇩
-  type: url-test
-  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/tt.png
-  url: http://www.gstatic.com/generate_204
-  interval: 50
-  use:
-  - TIKTOK-ID
+  - WA-ID
 - name: 🎓 EDUKASI 🇸🇬
   type: url-test
   icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/eduk.png
@@ -521,20 +402,6 @@ proxy-groups:
   interval: 50
   use:
   - ILPED-SG
-- name: 🎮 AVA-GAME 🇸🇬
-  type: url-test
-  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/game.png
-  url: http://www.gstatic.com/generate_204
-  interval: 50
-  use:
-  - AVA-SG
-- name: 💬 WhatsApp 🇸🇬
-  type: url-test
-  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/whatsapp_779120.png
-  url: http://www.gstatic.com/generate_204
-  interval: 50
-  use:
-  - WA-SG
 - name: 🎵 SPOTIFY 🇸🇬
   type: url-test
   icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/spotify.png
@@ -556,21 +423,13 @@ proxy-groups:
   interval: 50
   use:
   - GOPAY-SG
-- name: 🚗 GRAB 🇸🇬
+- name: 💬 WhatsApp 🇸🇬
   type: url-test
-  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/grab.png
+  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/whatsapp_779120.png
   url: http://www.gstatic.com/generate_204
   interval: 50
   use:
-  - GRAB-SG
-- name: 📱 TIKTOK 🇸🇬
-  type: url-test
-  icon: https://raw.githubusercontent.com/kcepu877/bot/refs/heads/main/lib/tt.png
-  url: http://www.gstatic.com/generate_204
-  interval: 50
-  use:
-  - TIKTOK-SG
-
+  - WA-SG
 rule-providers:
   rule_Direct:
     type: http
