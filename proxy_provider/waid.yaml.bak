@@ -1,6 +1,6 @@
 proxies:
-  - name: [Trojan]-APPS-ID
-    server: go.appsflyer.com
+  - name: [Trojan]-SPOTIFYID
+    server: 104.18.1.196
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
@@ -12,8 +12,8 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-  - name: [Trojan]-APPS-ID2
-    server: go.appsflyer.com
+  - name: [Trojan]-SPOTIFYID2
+    server: 104.18.1.196
     port: 443
     type: trojan
     password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff

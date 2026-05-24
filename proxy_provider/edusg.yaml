@@ -1,5 +1,5 @@
 proxies:
-  - name: "[Trojan] EDU SG"
+  - name: [Trojan]-EDU-SG
     server: 104.17.3.81
     port: 443
     type: trojan
@@ -12,18 +12,29 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-  - name: "[Vless] EDU SG"
+  - name: [Trojan]-EDU-SG2
     server: 104.17.3.81
     port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
+    sni: 1.nagesi7571.workers.dev
     network: ws
     ws-opts:
       path: /SG
       headers:
-        Host: 2.wakako8989.workers.dev
+        Host: 1.nagesi7571.workers.dev
+    udp: true
+  - name: TROTOAR-SG
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: 9fa0f873-8613-49d1-8ced-555960cc90ab
+    skip-cert-verify: true
+    sni: singapura.vpnstore28.my.id
+    network: ws
+    ws-opts:
+      path: /trojan
+      headers:
+        Host: singapura.vpnstore28.my.id
     udp: true

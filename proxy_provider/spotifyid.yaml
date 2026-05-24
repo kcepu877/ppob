@@ -1,5 +1,5 @@
 proxies:
-  - name: "[Trojan] SPOTIFY ID"
+  - name: [Trojan]-SPOTIFY-ID
     server: investors.spotify.com
     port: 443
     type: trojan
@@ -12,18 +12,16 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-  - name: "[Vless] SPOTIFY ID"
+  - name: [Trojan]-SPOTIFY-ID2
     server: investors.spotify.com
     port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
+    sni: 1.nagesi7571.workers.dev
     network: ws
     ws-opts:
       path: /ID
       headers:
-        Host: 2.wakako8989.workers.dev
+        Host: 1.nagesi7571.workers.dev
     udp: true

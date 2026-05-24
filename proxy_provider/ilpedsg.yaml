@@ -1,5 +1,5 @@
 proxies:
-  - name: "[Trojan] ILPED SG"
+  - name: [Trojan]-ILPED-SG
     server: io.ruangguru.com
     port: 443
     type: trojan
@@ -12,18 +12,16 @@ proxies:
       headers:
         Host: 2.wakako8989.workers.dev
     udp: true
-  - name: "[Vless] ILPED SG"
+  - name: [Trojan]-ILPED-SG2
     server: io.ruangguru.com
     port: 443
-    type: vless
-    uuid: eeeeeee3-eeee-4eee-aeee-eeeeeeeeeee5
-    cipher: auto
-    tls: true
+    type: trojan
+    password: aaaaaabb-4ddd-4eee-9fff-ffffffffffff
     skip-cert-verify: true
-    servername: 2.wakako8989.workers.dev
+    sni: 1.nagesi7571.workers.dev
     network: ws
     ws-opts:
       path: /SG
       headers:
-        Host: 2.wakako8989.workers.dev
+        Host: 1.nagesi7571.workers.dev
     udp: true
