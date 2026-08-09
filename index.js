@@ -1,6 +1,6 @@
 // ============================================
 // TELEGRAM BOT MULTI-FILE DENGAN MENU
-// CF WORKERS + GITHUB
+// CF WORKERS + GITHUB + ADMIN ONLY
 // ============================================
 
 // KONFIGURASI - akan diisi dari environment
@@ -170,6 +170,32 @@ async function editMessage(chatId, messageId, text, keyboard = null) {
 }
 
 // ============================================
+// 🔐 ADMIN CHECK
+// ============================================
+
+function isAuthorized(chatId) {
+  // Cek apakah chatId ada di daftar admin
+  const admins = CONFIG.ADMIN_IDS || [];
+  return admins.includes(chatId);
+}
+
+async function checkAuth(chatId) {
+  if (!isAuthorized(chatId)) {
+    await sendMessage(chatId, `
+🚫 *Akses Ditolak!*
+
+Anda tidak memiliki izin untuk menggunakan bot ini.
+
+👤 ID Telegram Anda: \`${chatId}\`
+
+Jika Anda adalah admin, tambahkan ID ini ke daftar admin.
+    `);
+    return false;
+  }
+  return true;
+}
+
+// ============================================
 // MENU BUILDERS
 // ============================================
 
@@ -181,7 +207,8 @@ function buildMainMenu() {
       { text: '🇸🇬 SGP', callback_data: 'file_sgp' }
     ],
     [
-      { text: '📊 STATUS SEMUA', callback_data: 'status_all' }
+      { text: '📊 STATUS SEMUA', callback_data: 'status_all' },
+      { text: '👥 LIST ADMIN', callback_data: 'list_admin' }
     ]
   ];
 }
@@ -199,11 +226,27 @@ function buildFileMenu(fileKey) {
   ];
 }
 
+function buildAdminMenu() {
+  return [
+    [
+      { text: '➕ Tambah Admin', callback_data: 'add_admin' },
+      { text: '➖ Hapus Admin', callback_data: 'remove_admin' }
+    ],
+    [
+      { text: '📋 List Admin', callback_data: 'list_admin' },
+      { text: '↩️ Kembali', callback_data: 'back_to_menu' }
+    ]
+  ];
+}
+
 // ============================================
 // HANDLER FUNCTIONS
 // ============================================
 
 async function handleMainMenu(chatId, messageId = null) {
+  // Cek auth dulu
+  if (!await checkAuth(chatId)) return;
+  
   const text = `
 📊 *MENU UTAMA*
 
@@ -214,6 +257,8 @@ Pilih file yang ingin diedit:
 🇸🇬 *SGP* - Data Singapore
 
 *Status:* Semua file terhubung ke GitHub
+
+👤 *Admin ID:* \`${chatId}\`
   `;
   
   const keyboard = buildMainMenu();
@@ -226,6 +271,9 @@ Pilih file yang ingin diedit:
 }
 
 async function handleFileView(chatId, fileKey, messageId = null) {
+  // Cek auth dulu
+  if (!await checkAuth(chatId)) return;
+  
   const fileConfig = CONFIG.FILES[fileKey];
   const result = await getFileContent(fileKey);
   
@@ -269,6 +317,9 @@ Pilih aksi:
 }
 
 async function handleStatusAll(chatId) {
+  // Cek auth dulu
+  if (!await checkAuth(chatId)) return;
+  
   let text = '📊 *STATUS SEMUA FILE*\n\n';
   
   for (const [key, config] of Object.entries(CONFIG.FILES)) {
@@ -292,6 +343,9 @@ async function handleStatusAll(chatId) {
 }
 
 async function handleEditLastLine(chatId, fileKey, messageId) {
+  // Cek auth dulu
+  if (!await checkAuth(chatId)) return;
+  
   const result = await getFileContent(fileKey);
   if (result.error) {
     await sendMessage(chatId, '❌ Gagal membaca file');
@@ -328,6 +382,9 @@ ${lastLine}
 }
 
 async function handleWriteNew(chatId, fileKey, messageId) {
+  // Cek auth dulu
+  if (!await checkAuth(chatId)) return;
+  
   const result = await getFileContent(fileKey);
   if (result.error) {
     await sendMessage(chatId, '❌ Gagal membaca file');
@@ -366,6 +423,9 @@ Atau gunakan tombol di bawah untuk batal.
 }
 
 async function handleSaveFile(chatId, fileKey) {
+  // Cek auth dulu
+  if (!await checkAuth(chatId)) return;
+  
   const sessionKey = `${chatId}_edit_file`;
   const contentKey = `${chatId}_edit_content`;
   const shaKey = `${chatId}_edit_sha`;
@@ -413,10 +473,47 @@ Klik tombol di bawah untuk kembali ke file.
 }
 
 // ============================================
+// ADMIN MANAGEMENT
+// ============================================
+
+async function handleListAdmin(chatId) {
+  // Cek auth dulu
+  if (!await checkAuth(chatId)) return;
+  
+  const admins = CONFIG.ADMIN_IDS || [];
+  
+  let text = '👥 *DAFTAR ADMIN*\n\n';
+  
+  if (admins.length === 0) {
+    text += 'Belum ada admin terdaftar.\n';
+  } else {
+    admins.forEach((id, index) => {
+      text += `${index + 1}. \`${id}\`\n`;
+    });
+  }
+  
+  text += `\n📌 *Total:* ${admins.length} admin`;
+  text += '\n\nKlik tombol di bawah untuk mengelola admin.';
+  
+  const keyboard = [
+    [
+      { text: '➕ Tambah Admin', callback_data: 'add_admin' },
+      { text: '➖ Hapus Admin', callback_data: 'remove_admin' }
+    ],
+    [{ text: '↩️ Kembali ke Menu', callback_data: 'back_to_menu' }]
+  ];
+  
+  await sendKeyboard(chatId, text, keyboard);
+}
+
+// ============================================
 // MAIN HANDLER
 // ============================================
 
 async function handleMessage(chatId, text, messageId = null) {
+  // Cek auth dulu
+  if (!await checkAuth(chatId)) return;
+  
   const editMode = sessions.get(`${chatId}_edit_mode`);
   
   // Jika dalam mode edit
@@ -507,29 +604,30 @@ export default {
       REPO_OWNER: env.REPO_OWNER,
       REPO_NAME: env.REPO_NAME,
       
-      // ==========================================
+      // 🔐 DAFTAR ADMIN (ID Telegram)
+      // Tambahkan ID Telegram di sini atau via environment
+      ADMIN_IDS: env.ADMIN_IDS ? env.ADMIN_IDS.split(',').map(id => Number(id.trim())) : [],
+      
       // 📁 DAFTAR 3 FILE TXT
-      // ==========================================
       FILES: {
         hk: { 
-          name: 'HK',           // Nama tampilan
-          path: 'hk.txt',       // Nama file di GitHub
-          emoji: '🇭🇰'          // Emoji untuk tampilan
+          name: 'HK',
+          path: 'hk.txt',
+          emoji: '🇭🇰'
         },
         sdny: { 
-          name: 'SDNY', 
-          path: 'sdny.txt', 
-          emoji: '🇺🇸' 
+          name: 'SDNY',
+          path: 'sdny.txt',
+          emoji: '🇺🇸'
         },
         sgp: { 
-          name: 'SGP', 
-          path: 'sgp.txt', 
-          emoji: '🇸🇬' 
+          name: 'SGP',
+          path: 'sgp.txt',
+          emoji: '🇸🇬'
         }
       },
       
-      // State untuk sesi editing
-      SESSION_TIMEOUT: 600 // 10 menit
+      SESSION_TIMEOUT: 600
     };
     
     // Cek apakah semua variabel terisi
@@ -607,6 +705,9 @@ export default {
         }
         else if (callbackData === 'status_all') {
           await handleStatusAll(chatId);
+        }
+        else if (callbackData === 'list_admin') {
+          await handleListAdmin(chatId);
         }
         else if (callbackData.startsWith('file_')) {
           const fileKey = callbackData.replace('file_', '');
