@@ -10,7 +10,7 @@ let CONFIG = {};
 const sessions = new Map();
 
 // ============================================
-// GITHUB API FUNCTIONS
+// GITHUB API FUNCTIONS (DIPERBAIKI)
 // ============================================
 
 async function getFileContent(fileKey) {
@@ -18,31 +18,46 @@ async function getFileContent(fileKey) {
   if (!fileConfig) return { error: 'File tidak ditemukan' };
   
   try {
-    const response = await fetch(
-      `https://api.github.com/repos/${CONFIG.REPO_OWNER}/${CONFIG.REPO_NAME}/contents/${fileConfig.path}`,
-      {
-        headers: {
-          'Authorization': `token ${CONFIG.GITHUB_TOKEN}`,
-          'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json'
-        }
-      }
-    );
+    const url = `https://api.github.com/repos/${CONFIG.REPO_OWNER}/${CONFIG.REPO_NAME}/contents/${fileConfig.path}`;
+    console.log('Fetching:', url);
     
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `token ${CONFIG.GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'Telegram-Bot-CF-Worker'
+      }
+    });
+    
+    console.log('GitHub Response Status:', response.status);
+    
+    // Handle 404 - file belum ada
     if (response.status === 404) {
       return { content: '', sha: null, exists: false };
     }
     
+    // Handle 401/403 - token error
+    if (response.status === 401) {
+      return { error: '❌ Token GitHub tidak valid! Periksa GITHUB_TOKEN di dashboard.' };
+    }
+    
+    if (response.status === 403) {
+      return { error: '❌ Akses ditolak! Periksa scope token GitHub (butuh repo).' };
+    }
+    
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      const errorData = await response.text();
+      console.error('GitHub Error:', errorData);
+      return { error: `❌ HTTP ${response.status}: ${errorData.substring(0, 100)}` };
     }
     
     const data = await response.json();
     const content = atob(data.content);
     return { content, sha: data.sha, exists: true };
+    
   } catch (error) {
     console.error('Error reading file:', error);
-    return { error: error.message };
+    return { error: `❌ Error: ${error.message}` };
   }
 }
 
@@ -51,10 +66,11 @@ async function updateFileContent(fileKey, newContent, sha = null) {
   if (!fileConfig) return { error: 'File tidak ditemukan' };
   
   try {
+    // Jika file belum ada, buat baru
     const body = {
       message: `Update ${fileConfig.name}.txt via Telegram Bot`,
       content: btoa(unescape(encodeURIComponent(newContent))),
-      sha: sha
+      sha: sha // Kalau null, GitHub akan buat file baru
     };
     
     const response = await fetch(
@@ -64,20 +80,24 @@ async function updateFileContent(fileKey, newContent, sha = null) {
         headers: {
           'Authorization': `token ${CONFIG.GITHUB_TOKEN}`,
           'Accept': 'application/vnd.github.v3+json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'User-Agent': 'Telegram-Bot-CF-Worker'
         },
         body: JSON.stringify(body)
       }
     );
     
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      const errorData = await response.text();
+      console.error('GitHub Update Error:', errorData);
+      return { error: `❌ HTTP ${response.status}: ${errorData.substring(0, 100)}` };
     }
     
     return { success: true };
+    
   } catch (error) {
     console.error('Error updating file:', error);
-    return { error: error.message };
+    return { error: `❌ Error: ${error.message}` };
   }
 }
 
@@ -86,15 +106,15 @@ async function updateFileContent(fileKey, newContent, sha = null) {
 // ============================================
 
 async function sendMessage(chatId, text, parseMode = 'Markdown', extra = {}) {
-  const url = `https://api.telegram.org/bot${CONFIG.TELEGRAM_TOKEN}/sendMessage`;
-  const body = {
-    chat_id: chatId,
-    text: text,
-    parse_mode: parseMode,
-    ...extra
-  };
-  
   try {
+    const url = `https://api.telegram.org/bot${CONFIG.TELEGRAM_TOKEN}/sendMessage`;
+    const body = {
+      chat_id: chatId,
+      text: text,
+      parse_mode: parseMode,
+      ...extra
+    };
+    
     await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -106,18 +126,18 @@ async function sendMessage(chatId, text, parseMode = 'Markdown', extra = {}) {
 }
 
 async function sendKeyboard(chatId, text, keyboard, parseMode = 'Markdown') {
-  const url = `https://api.telegram.org/bot${CONFIG.TELEGRAM_TOKEN}/sendMessage`;
-  const body = {
-    chat_id: chatId,
-    text: text,
-    parse_mode: parseMode,
-    reply_markup: {
-      inline_keyboard: keyboard,
-      resize_keyboard: true
-    }
-  };
-  
   try {
+    const url = `https://api.telegram.org/bot${CONFIG.TELEGRAM_TOKEN}/sendMessage`;
+    const body = {
+      chat_id: chatId,
+      text: text,
+      parse_mode: parseMode,
+      reply_markup: {
+        inline_keyboard: keyboard,
+        resize_keyboard: true
+      }
+    };
+    
     await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -129,8 +149,8 @@ async function sendKeyboard(chatId, text, keyboard, parseMode = 'Markdown') {
 }
 
 async function answerCallback(callbackId, text = '') {
-  const url = `https://api.telegram.org/bot${CONFIG.TELEGRAM_TOKEN}/answerCallbackQuery`;
   try {
+    const url = `https://api.telegram.org/bot${CONFIG.TELEGRAM_TOKEN}/answerCallbackQuery`;
     await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -146,19 +166,19 @@ async function answerCallback(callbackId, text = '') {
 }
 
 async function editMessage(chatId, messageId, text, keyboard = null) {
-  const url = `https://api.telegram.org/bot${CONFIG.TELEGRAM_TOKEN}/editMessageText`;
-  const body = {
-    chat_id: chatId,
-    message_id: messageId,
-    text: text,
-    parse_mode: 'Markdown'
-  };
-  
-  if (keyboard) {
-    body.reply_markup = { inline_keyboard: keyboard };
-  }
-  
   try {
+    const url = `https://api.telegram.org/bot${CONFIG.TELEGRAM_TOKEN}/editMessageText`;
+    const body = {
+      chat_id: chatId,
+      message_id: messageId,
+      text: text,
+      parse_mode: 'Markdown'
+    };
+    
+    if (keyboard) {
+      body.reply_markup = { inline_keyboard: keyboard };
+    }
+    
     await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -174,7 +194,6 @@ async function editMessage(chatId, messageId, text, keyboard = null) {
 // ============================================
 
 function isAuthorized(chatId) {
-  // Cek apakah chatId ada di daftar admin
   const admins = CONFIG.ADMIN_IDS || [];
   return admins.includes(chatId);
 }
@@ -207,8 +226,7 @@ function buildMainMenu() {
       { text: '🇸🇬 SGP', callback_data: 'file_sgp' }
     ],
     [
-      { text: '📊 STATUS SEMUA', callback_data: 'status_all' },
-      { text: '👥 LIST ADMIN', callback_data: 'list_admin' }
+      { text: '📊 STATUS SEMUA', callback_data: 'status_all' }
     ]
   ];
 }
@@ -226,25 +244,11 @@ function buildFileMenu(fileKey) {
   ];
 }
 
-function buildAdminMenu() {
-  return [
-    [
-      { text: '➕ Tambah Admin', callback_data: 'add_admin' },
-      { text: '➖ Hapus Admin', callback_data: 'remove_admin' }
-    ],
-    [
-      { text: '📋 List Admin', callback_data: 'list_admin' },
-      { text: '↩️ Kembali', callback_data: 'back_to_menu' }
-    ]
-  ];
-}
-
 // ============================================
 // HANDLER FUNCTIONS
 // ============================================
 
 async function handleMainMenu(chatId, messageId = null) {
-  // Cek auth dulu
   if (!await checkAuth(chatId)) return;
   
   const text = `
@@ -256,8 +260,7 @@ Pilih file yang ingin diedit:
 🇺🇸 *SDNY* - Data Sidney  
 🇸🇬 *SGP* - Data Singapore
 
-*Status:* Semua file terhubung ke GitHub
-
+📌 *Status:* Terhubung ke GitHub
 👤 *Admin ID:* \`${chatId}\`
   `;
   
@@ -271,18 +274,28 @@ Pilih file yang ingin diedit:
 }
 
 async function handleFileView(chatId, fileKey, messageId = null) {
-  // Cek auth dulu
   if (!await checkAuth(chatId)) return;
   
   const fileConfig = CONFIG.FILES[fileKey];
   const result = await getFileContent(fileKey);
   
+  // Kirim pesan error yang jelas
   if (result.error) {
-    await sendMessage(chatId, `❌ Gagal membaca file ${fileConfig.name}`);
+    await sendMessage(chatId, `
+❌ *Gagal membaca file ${fileConfig.name}*
+
+${result.error}
+
+💡 *Solusi:*
+1. Periksa GITHUB_TOKEN di dashboard
+2. Pastikan token punya scope \`repo\`
+3. Pastikan file \`${fileConfig.path}\` ada di repo
+4. Periksa REPO_OWNER dan REPO_NAME
+    `);
     return;
   }
   
-  const content = result.content || '📄 *File kosong*';
+  const content = result.content || '(File kosong)';
   const displayContent = content.length > 3000 
     ? content.substring(0, 3000) + '\n\n... *(file terlalu panjang)*'
     : content;
@@ -310,22 +323,22 @@ Pilih aksi:
     await sendKeyboard(chatId, text, keyboard);
   }
   
-  // Simpan session
   sessions.set(`${chatId}_current_file`, fileKey);
   sessions.set(`${chatId}_current_sha`, result.sha);
   sessions.set(`${chatId}_current_content`, content);
 }
 
 async function handleStatusAll(chatId) {
-  // Cek auth dulu
   if (!await checkAuth(chatId)) return;
   
   let text = '📊 *STATUS SEMUA FILE*\n\n';
+  let allOk = true;
   
   for (const [key, config] of Object.entries(CONFIG.FILES)) {
     const result = await getFileContent(key);
     if (result.error) {
-      text += `❌ ${config.emoji} *${config.name}*: Error\n`;
+      text += `❌ ${config.emoji} *${config.name}*: ${result.error}\n`;
+      allOk = false;
     } else {
       const lines = result.content ? result.content.split('\n').length : 0;
       const chars = result.content ? result.content.length : 0;
@@ -333,7 +346,11 @@ async function handleStatusAll(chatId) {
     }
   }
   
-  text += '\n↩️ Klik kembali untuk ke menu utama';
+  if (!allOk) {
+    text += '\n⚠️ Ada error! Periksa token GitHub dan repository.';
+  }
+  
+  text += '\n\n↩️ Klik kembali untuk ke menu utama';
   
   const keyboard = [
     [{ text: '↩️ Kembali ke Menu', callback_data: 'back_to_menu' }]
@@ -343,19 +360,17 @@ async function handleStatusAll(chatId) {
 }
 
 async function handleEditLastLine(chatId, fileKey, messageId) {
-  // Cek auth dulu
   if (!await checkAuth(chatId)) return;
   
   const result = await getFileContent(fileKey);
   if (result.error) {
-    await sendMessage(chatId, '❌ Gagal membaca file');
+    await sendMessage(chatId, `❌ ${result.error}`);
     return;
   }
   
   const lines = result.content ? result.content.split('\n') : [];
   const lastLine = lines.length > 0 ? lines[lines.length - 1] : '(file kosong)';
   
-  // Simpan state
   sessions.set(`${chatId}_edit_mode`, 'edit_last');
   sessions.set(`${chatId}_edit_file`, fileKey);
   sessions.set(`${chatId}_edit_lines`, lines);
@@ -370,8 +385,6 @@ ${lastLine}
 \`\`\`
 
 📝 Kirimkan *teks baru* untuk mengganti baris terakhir.
-
-*Atau* gunakan tombol di bawah untuk batal.
   `;
   
   const keyboard = [
@@ -382,16 +395,14 @@ ${lastLine}
 }
 
 async function handleWriteNew(chatId, fileKey, messageId) {
-  // Cek auth dulu
   if (!await checkAuth(chatId)) return;
   
   const result = await getFileContent(fileKey);
   if (result.error) {
-    await sendMessage(chatId, '❌ Gagal membaca file');
+    await sendMessage(chatId, `❌ ${result.error}`);
     return;
   }
   
-  // Simpan state
   sessions.set(`${chatId}_edit_mode`, 'write_new');
   sessions.set(`${chatId}_edit_file`, fileKey);
   sessions.set(`${chatId}_edit_content`, result.content || '');
@@ -402,17 +413,11 @@ async function handleWriteNew(chatId, fileKey, messageId) {
 
 Kirimkan *teks baru* untuk ditambahkan ke file.
 
-*Format:*
-• Satu baris: akan ditambahkan sebagai baris baru
-• Multiple baris: akan ditambahkan semua
-
 *Contoh:*
 \`\`\`
 Hasil HK: 1234
 Tanggal: 2024-01-01
 \`\`\`
-
-Atau gunakan tombol di bawah untuk batal.
   `;
   
   const keyboard = [
@@ -423,16 +428,14 @@ Atau gunakan tombol di bawah untuk batal.
 }
 
 async function handleSaveFile(chatId, fileKey) {
-  // Cek auth dulu
   if (!await checkAuth(chatId)) return;
   
   const sessionKey = `${chatId}_edit_file`;
   const contentKey = `${chatId}_edit_content`;
   const shaKey = `${chatId}_edit_sha`;
   
-  // Cek apakah ada session
   if (!sessions.has(sessionKey) || !sessions.has(contentKey)) {
-    await sendMessage(chatId, '❌ Tidak ada data yang disimpan untuk disimpan.');
+    await sendMessage(chatId, '❌ Tidak ada data yang disimpan.');
     return;
   }
   
@@ -441,11 +444,10 @@ async function handleSaveFile(chatId, fileKey) {
   const sha = sessions.get(shaKey);
   
   if (targetFile !== fileKey) {
-    await sendMessage(chatId, '❌ File tidak sesuai dengan session.');
+    await sendMessage(chatId, '❌ File tidak sesuai.');
     return;
   }
   
-  // Simpan ke GitHub
   const result = await updateFileContent(fileKey, content, sha);
   
   if (result.success) {
@@ -454,30 +456,21 @@ async function handleSaveFile(chatId, fileKey) {
 
 📁 File: ${CONFIG.FILES[fileKey].emoji} ${CONFIG.FILES[fileKey].name}
 📊 Ukuran: ${content.length} karakter
-
-Klik tombol di bawah untuk kembali ke file.
     `);
     
-    // Clear session
     sessions.delete(`${chatId}_edit_file`);
     sessions.delete(`${chatId}_edit_content`);
     sessions.delete(`${chatId}_edit_sha`);
     sessions.delete(`${chatId}_edit_mode`);
     sessions.delete(`${chatId}_edit_lines`);
     
-    // Tampilkan file lagi
     await handleFileView(chatId, fileKey);
   } else {
-    await sendMessage(chatId, `❌ Gagal menyimpan: ${result.error}`);
+    await sendMessage(chatId, `❌ ${result.error}`);
   }
 }
 
-// ============================================
-// ADMIN MANAGEMENT
-// ============================================
-
 async function handleListAdmin(chatId) {
-  // Cek auth dulu
   if (!await checkAuth(chatId)) return;
   
   const admins = CONFIG.ADMIN_IDS || [];
@@ -493,13 +486,9 @@ async function handleListAdmin(chatId) {
   }
   
   text += `\n📌 *Total:* ${admins.length} admin`;
-  text += '\n\nKlik tombol di bawah untuk mengelola admin.';
+  text += '\n\n↩️ Klik kembali ke menu utama.';
   
   const keyboard = [
-    [
-      { text: '➕ Tambah Admin', callback_data: 'add_admin' },
-      { text: '➖ Hapus Admin', callback_data: 'remove_admin' }
-    ],
     [{ text: '↩️ Kembali ke Menu', callback_data: 'back_to_menu' }]
   ];
   
@@ -510,13 +499,11 @@ async function handleListAdmin(chatId) {
 // MAIN HANDLER
 // ============================================
 
-async function handleMessage(chatId, text, messageId = null) {
-  // Cek auth dulu
+async function handleMessage(chatId, text) {
   if (!await checkAuth(chatId)) return;
   
   const editMode = sessions.get(`${chatId}_edit_mode`);
   
-  // Jika dalam mode edit
   if (editMode) {
     const fileKey = sessions.get(`${chatId}_edit_file`);
     const sha = sessions.get(`${chatId}_edit_sha`);
@@ -531,7 +518,6 @@ async function handleMessage(chatId, text, messageId = null) {
     let newContent = '';
     
     if (editMode === 'edit_last') {
-      // Edit baris terakhir
       const lines = sessions.get(`${chatId}_edit_lines`) || [];
       if (lines.length > 0) {
         lines[lines.length - 1] = text;
@@ -540,15 +526,12 @@ async function handleMessage(chatId, text, messageId = null) {
       }
       newContent = lines.join('\n');
     } else if (editMode === 'write_new') {
-      // Tambah baris baru
       const currentContent = sessions.get(`${chatId}_edit_content`) || '';
       newContent = currentContent + (currentContent ? '\n' : '') + text;
     }
     
-    // Update content di session
     sessions.set(`${chatId}_edit_content`, newContent);
     
-    // Preview
     const preview = newContent.length > 500 
       ? newContent.substring(0, 500) + '\n... *(file terpotong)*'
       : newContent;
@@ -566,26 +549,23 @@ ${preview}
 
 📊 Ukuran: ${newContent.length} karakter
 
-Klik *[📤 Kirim = Simpan]* untuk menyimpan ke GitHub.
+Klik *[📤 Kirim = Simpan]* untuk menyimpan.
     `);
     
-    // Tampilkan menu file dengan status save
     const keyboard = [
       [
         { text: '✏️ Edit Lagi', callback_data: `edit_last_${fileKey}` },
         { text: '📤 Kirim = Simpan', callback_data: `save_${fileKey}` }
       ],
       [
-        { text: '❌ Batal & Kembali', callback_data: `cancel_edit` }
+        { text: '❌ Batal', callback_data: 'cancel_edit' }
       ]
     ];
     
     await sendKeyboard(chatId, '📌 *Pilih aksi selanjutnya:*', keyboard);
-    
     return;
   }
   
-  // Jika bukan mode edit, tampilkan menu utama
   await handleMainMenu(chatId);
 }
 
@@ -603,48 +583,26 @@ export default {
       GITHUB_TOKEN: env.GITHUB_TOKEN,
       REPO_OWNER: env.REPO_OWNER,
       REPO_NAME: env.REPO_NAME,
-      
-      // 🔐 DAFTAR ADMIN (ID Telegram)
-      // Tambahkan ID Telegram di sini atau via environment
       ADMIN_IDS: env.ADMIN_IDS ? env.ADMIN_IDS.split(',').map(id => Number(id.trim())) : [],
-      
-      // 📁 DAFTAR 3 FILE TXT
       FILES: {
-        hk: { 
-          name: 'HK',
-          path: 'hk.txt',
-          emoji: '🇭🇰'
-        },
-        sdny: { 
-          name: 'SDNY',
-          path: 'sdny.txt',
-          emoji: '🇺🇸'
-        },
-        sgp: { 
-          name: 'SGP',
-          path: 'sgp.txt',
-          emoji: '🇸🇬'
-        }
-      },
-      
-      SESSION_TIMEOUT: 600
+        hk: { name: 'HK', path: 'hk.txt', emoji: '🇭🇰' },
+        sdny: { name: 'SDNY', path: 'sdny.txt', emoji: '🇺🇸' },
+        sgp: { name: 'SGP', path: 'sgp.txt', emoji: '🇸🇬' }
+      }
     };
     
-    // Cek apakah semua variabel terisi
+    // Cek environment variables
     if (!CONFIG.TELEGRAM_TOKEN || CONFIG.TELEGRAM_TOKEN === 'YOUR_BOT_TOKEN') {
-      return new Response('Error: TELEGRAM_TOKEN not configured in environment variables', { status: 500 });
+      return new Response('Error: TELEGRAM_TOKEN not configured', { status: 500 });
     }
-    
     if (!CONFIG.GITHUB_TOKEN || CONFIG.GITHUB_TOKEN === 'YOUR_GITHUB_TOKEN') {
-      return new Response('Error: GITHUB_TOKEN not configured in environment variables', { status: 500 });
+      return new Response('Error: GITHUB_TOKEN not configured', { status: 500 });
     }
-    
     if (!CONFIG.REPO_OWNER || CONFIG.REPO_OWNER === 'username_anda') {
-      return new Response('Error: REPO_OWNER not configured in environment variables', { status: 500 });
+      return new Response('Error: REPO_OWNER not configured', { status: 500 });
     }
-    
     if (!CONFIG.REPO_NAME || CONFIG.REPO_NAME === 'nama_repo_anda') {
-      return new Response('Error: REPO_NAME not configured in environment variables', { status: 500 });
+      return new Response('Error: REPO_NAME not configured', { status: 500 });
     }
     
     // ============================================
@@ -659,41 +617,33 @@ export default {
       const body = await request.json();
       console.log('Webhook received:', JSON.stringify(body));
       
-      // Handle pesan
       if (body.message) {
         const chatId = body.message.chat.id;
         const text = body.message.text || '';
-        const messageId = body.message.message_id;
         
-        // Command /start
         if (text === '/start' || text === '/start bob') {
           await handleMainMenu(chatId);
           return new Response('OK', { status: 200 });
         }
         
-        // Jika text bukan command, handle sebagai input
         if (!text.startsWith('/')) {
           await handleMessage(chatId, text);
           return new Response('OK', { status: 200 });
         }
       }
       
-      // Handle callback (tombol)
       if (body.callback_query) {
         const chatId = body.callback_query.message.chat.id;
         const messageId = body.callback_query.message.message_id;
         const callbackData = body.callback_query.data;
         const callbackId = body.callback_query.id;
         
-        // Answer callback
         await answerCallback(callbackId);
         
-        // Parse callback data
         if (callbackData === 'back_to_menu') {
           await handleMainMenu(chatId, messageId);
         }
         else if (callbackData === 'cancel_edit') {
-          // Clear session
           sessions.delete(`${chatId}_edit_mode`);
           sessions.delete(`${chatId}_edit_file`);
           sessions.delete(`${chatId}_edit_content`);
