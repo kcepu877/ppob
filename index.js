@@ -210,7 +210,7 @@ async function handleMainMenu(chatId, messageId = null) {
 Pilih file yang ingin diedit:
 
 🇭🇰 *HK* - Data Hongkong
-🇺🇸 *SDNY* - Data Sidney
+🇺🇸 *SDNY* - Data Sidney  
 🇸🇬 *SGP* - Data Singapore
 
 *Status:* Semua file terhubung ke GitHub
@@ -507,11 +507,25 @@ export default {
       REPO_OWNER: env.REPO_OWNER,
       REPO_NAME: env.REPO_NAME,
       
-      // Daftar file yang dikelola
+      // ==========================================
+      // 📁 DAFTAR 3 FILE TXT
+      // ==========================================
       FILES: {
-        hk: { name: 'HK', path: 'hk.txt', emoji: '🇭🇰' },
-        sdny: { name: 'SDNY', path: 'sdny.txt', emoji: '🇺🇸' },
-        sgp: { name: 'SGP', path: 'sgp.txt', emoji: '🇸🇬' }
+        hk: { 
+          name: 'HK',           // Nama tampilan
+          path: 'hk.txt',       // Nama file di GitHub
+          emoji: '🇭🇰'          // Emoji untuk tampilan
+        },
+        sdny: { 
+          name: 'SDNY', 
+          path: 'sdny.txt', 
+          emoji: '🇺🇸' 
+        },
+        sgp: { 
+          name: 'SGP', 
+          path: 'sgp.txt', 
+          emoji: '🇸🇬' 
+        }
       },
       
       // State untuk sesi editing
