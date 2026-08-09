@@ -1,0 +1,10 @@
+name = "telegram-bot"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# KOSONGKAN - Token diisi via Cloudflare Dashboard
+# [vars]
+# TELEGRAM_TOKEN = ""
+# GITHUB_TOKEN = ""
+# REPO_OWNER = ""
+# REPO_NAME = ""
